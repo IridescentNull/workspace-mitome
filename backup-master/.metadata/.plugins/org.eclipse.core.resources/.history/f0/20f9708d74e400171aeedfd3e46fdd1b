@@ -1,0 +1,13 @@
+package com.internousdev.shop.dao;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+
+import com.internousdev.shop.dto.PurchaseHistoryDTO;
+import com.internousdev.shop.util.DBConnector;
+
+public class PurchaseHistoryDAO {
+	private DBConnector dbConnector = new DBConnector();
+	private Connection connection = dbConnector.getConnection();
+	private ArrayList<PurchaseHistoryDTO> purchaseHistoryDTO = new ArrayList<PurchaseHistoryDTO>();
+}

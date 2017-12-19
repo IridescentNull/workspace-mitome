@@ -1,0 +1,9 @@
+package com.internousdev.shop.dao;
+
+import com.internousdev.shop.util.DBConnector;
+
+public class PurchaseHistoryDAO {
+	private DBConnector dbConnector = new DBConnector();
+
+	private Connection connection = dbConnector.getConnection();
+}

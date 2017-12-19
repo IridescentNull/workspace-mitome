@@ -1,0 +1,77 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<jsp:include page="header.jsp"/>
+	<table class="table table-striped">
+	<s:iterator value="purchaseHistoryDTOList">
+		<tr>
+			<td>
+				<div class="row">
+					<div class="col-sm-4 text-center">
+						<s:if test="itemTransactionId == 1">
+							<img src="desktop.gif" width ="200px">
+						</s:if>
+					</div>
+					<div class="col-sm-4">
+						<s:if test="itemTransactionId == 1">
+							<h3><strong>Desktop PC</strong></h3>
+							<div style="line-height: 0.5;"><br></div>
+						</s:if>
+						Name: <s:property value="shippingUserName"/><br>
+
+						 <div style="line-height: 0.5;"><br></div>
+						Address: <s:property value="shippingAddress1"/><br>
+						 <s:property value="shippingAddress2"/>
+						 <div style="line-height: 0.5;"><br></div>
+						time of order:<br> <s:property value="insertDate"/><br>
+						<s:if test="deliver == 0">
+						(Shipping: Two Days Later)<br>
+						</s:if>
+						<s:if test="deliver == 1">
+						(Same Day Shipping)<br>
+						</s:if>
+						<s:if test="deliver == 2">
+						(Please pick up by yourself!)<br>
+						</s:if>
+						<div style="line-height: 0.5;"><br></div>
+						Tax-included price: <strong>$<s:property value="totalPrice3"/></strong>
+					</div>
+					<div class="col-sm-4">
+						<s:if test="itemTransactionId == 1 || itemTransactionId == 2">
+						<ul style="color: gray;">
+									<li>2.3GHz dual-leaf 7th-generation Garnish Core i5 fruit-processor, Turbo Boost up to 3.6GHz</li>
+
+									<li>
+										<s:if test='memoryForm == 0'>8GB 2133MHz DDR4</s:if>
+										<s:if test='memoryForm == 1'>16GB 2133MHz DDR4</s:if>
+										<s:if test='memoryForm == 2'>32GB 2133MHz DDR4</s:if>
+									</li>
+
+									<li>
+										<s:if test='storageForm == 0'>1TB Cereal Food ATA Drive</s:if>
+										<s:if test='storageForm == 1'>2TB Cereal Food ATA Drive</s:if>
+										<s:if test='storageForm == 2'>256GB SSD</s:if>
+										<s:if test='storageForm == 3'>512GB SSD</s:if>
+										<s:if test='storageForm == 4'>1TB SSD</s:if>
+									</li>
+
+									<li>
+										<s:if test='mouseForm == 0'>Magic Mouse 2</s:if>
+										<s:if test='mouseForm == 1'>Magic Trackpad 2</s:if>
+										<s:if test='mouseForm == 2'>Magic Mouse 2 + Trackpad 2</s:if>
+									</li>
+
+									<li>Magic Keyboard - US English</li>
+
+									<li>Accessory Kit</li>
+								</ul>
+						</s:if>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</s:iterator>
+
+	</table>
+
+
+<jsp:include page="footer.jsp"/>

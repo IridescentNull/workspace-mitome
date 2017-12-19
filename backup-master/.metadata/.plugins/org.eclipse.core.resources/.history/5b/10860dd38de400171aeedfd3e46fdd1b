@@ -1,0 +1,33 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<jsp:include page="header.jsp"/>
+	<table class="table table-striped">
+	<s:iterator value="purchaseHistoryDTOList">
+		<tr>
+			<td>
+				<div class="row">
+					<div class="col-sm-4 text-center">
+						<s:if test="itemTransactionId == 1">
+							<img src="desktop.gif" width ="100px">
+						</s:if>
+					</div>
+					<div class="col-sm-4">
+						Address: <s:property value="shippingAddress1"/><br>
+						 <s:property value="shippingAddress2"/>
+						<s:if test="deliver == 1 || deliver == 3">
+							<img src="desktop.gif" width ="100px">
+						</s:if>
+					</div>
+					<div class="col-sm-4">
+
+						Tax-included price: <s:property value="totalPrice3"/>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</s:iterator>
+
+	</table>
+
+
+<jsp:include page="footer.jsp"/>

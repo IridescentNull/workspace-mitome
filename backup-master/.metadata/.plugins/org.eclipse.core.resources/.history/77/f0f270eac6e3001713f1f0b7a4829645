@@ -1,0 +1,302 @@
+package com.internousdev.shop.action;
+
+import java.sql.SQLException;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.shop.dao.PurchaseCompleteDAO;
+import com.internousdev.shop.util.DateUtil;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class PurchaseCompleteAction extends ActionSupport implements SessionAware{
+	private int itemTransactionId;
+	private String shippingUserName;
+	private String shippingCompanyName;
+	private String shippingAddress1;
+	private String shippingAddress2;
+	private String shippingUserCity;
+	private String shippingUserState;
+	private String shippingUserZIP;
+	private String shippingUserCountry;
+	private String shippingUserPhone;
+	private int memoryForm;
+	private int storageForm;
+	private int mouseForm;
+	private int fruitForm;
+	private int flowerForm;
+	private int careCheck;
+	private int connector1Check;
+	private int connector2Check;
+	private int driveCheck;
+	private int storageCheck;
+	private int airportCheck;
+	private int timeCapsuleCheck;
+	private int officeCheck;
+	private int accessoriesType;
+	private int deliver;
+	private String loginUserIdShadow;
+	private DateUtil dateUtil = new DateUtil();
+	private int cardType;
+	private String cardNumber;
+	private String nameOnCard;
+	private String cardExpiryDate;
+	private short cardCode;
+	private float price;
+	private float totalPrice1;
+	private float totalPrice2;
+	private float totalPrice3;
+	private PurchaseCompleteDAO purchaseCompleteDAO = new PurchaseCompleteDAO();
+	public Map<String, Object> session;
+	public int goodsTypeArray[] = new int[11];//これいらんかも
+	// Cureが3、connectorが4,5,driveが6、外部storageが7,airportが8、timeカプセルが9、オフィスが10
+
+
+	public String execute() throws SQLException{
+		int goodsTypeArray[] ={0,0,0,(int)session.get("cureCheck"),(int)session.get("connector1Check"),(int)session.get("connector2Check"),(int)session.get("driveCheck"),(int)session.get("storageCheck"),(int)session.get("airportCheck"),(int)session.get("timeCapsuleCheck"),(int)session.get("officeCheck")};
+		if((int)session.get("pcType") == 1 || (int)session.get("pcType") == 2){//デスクトップPCが1、ラックトップが2
+			itemTransactionId = (int)session.get("pcType");
+			memoryForm = (int)session.get("memoryForm");
+			storageForm = (int)session.get("storageForm");
+			mouseForm = (int)session.get("mouseForm");
+			fruitForm = (int)session.get("fruitForm");
+			flowerForm = (int)session.get("flowerForm");
+			loginUserIdShadow = (String)session.get("loginUserIdShadow");
+			deliver = (int)session.get("pcOneDeliver");
+			totalPrice3 = ((float)session.get("totalPrice1") * 1.08f);
+			purchaseCompleteDAO.recordGoods(itemTransactionId, totalPrice3, shippingUserName, shippingCompanyName, shippingAddress1, shippingAddress2, shippingUserCity, shippingUserState, shippingUserZIP, shippingUserCountry, shippingUserPhone, memoryForm, storageForm, mouseForm, fruitForm, flowerForm, 0, deliver, loginUserIdShadow);
+		}
+		for(int i = 3; i <= 11; i++){
+			if(goodsTypeArray[i] != 0){
+				itemTransactionId = i;
+				accessoriesType = i
+			}
+		}
+
+		return SUCCESS;
+	}
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+
+	public int getItemTransactionId() {
+		return itemTransactionId;
+	}
+
+	public void setItemTransactionId(int itemTransactionId) {
+		this.itemTransactionId = itemTransactionId;
+	}
+
+	public String getShippingUserName() {
+		return shippingUserName;
+	}
+
+	public void setShippingUserName(String shippingUserName) {
+		this.shippingUserName = shippingUserName;
+	}
+
+	public String getShippingCompanyName() {
+		return shippingCompanyName;
+	}
+
+	public void setShippingCompanyName(String shippingCompanyName) {
+		this.shippingCompanyName = shippingCompanyName;
+	}
+
+	public String getShippingAddress1() {
+		return shippingAddress1;
+	}
+
+	public void setShippingAddress1(String shippingAddress1) {
+		this.shippingAddress1 = shippingAddress1;
+	}
+
+	public String getShippingAddress2() {
+		return shippingAddress2;
+	}
+
+	public void setShippingAddress2(String shippingAddress2) {
+		this.shippingAddress2 = shippingAddress2;
+	}
+
+	public String getShippingUserCity() {
+		return shippingUserCity;
+	}
+
+	public void setShippingUserCity(String shippingUserCity) {
+		this.shippingUserCity = shippingUserCity;
+	}
+
+	public String getShippingUserState() {
+		return shippingUserState;
+	}
+
+	public void setShippingUserState(String shippingUserState) {
+		this.shippingUserState = shippingUserState;
+	}
+
+	public String getShippingUserZIP() {
+		return shippingUserZIP;
+	}
+
+	public void setShippingUserZIP(String shippingUserZIP) {
+		this.shippingUserZIP = shippingUserZIP;
+	}
+
+	public String getShippingUserCountry() {
+		return shippingUserCountry;
+	}
+
+	public void setShippingUserCountry(String shippingUserCountry) {
+		this.shippingUserCountry = shippingUserCountry;
+	}
+
+	public String getShippingUserPhone() {
+		return shippingUserPhone;
+	}
+
+	public void setShippingUserPhone(String shippingUserPhone) {
+		this.shippingUserPhone = shippingUserPhone;
+	}
+
+	public int getCareCheck() {
+		return careCheck;
+	}
+
+	public void setCareCheck(int careCheck) {
+		this.careCheck = careCheck;
+	}
+
+	public int getConnector1Check() {
+		return connector1Check;
+	}
+
+	public void setConnector1Check(int connector1Check) {
+		this.connector1Check = connector1Check;
+	}
+
+	public int getConnector2Check() {
+		return connector2Check;
+	}
+
+	public void setConnector2Check(int connector2Check) {
+		this.connector2Check = connector2Check;
+	}
+
+	public int getDriveCheck() {
+		return driveCheck;
+	}
+
+	public void setDriveCheck(int driveCheck) {
+		this.driveCheck = driveCheck;
+	}
+
+	public int getStorageCheck() {
+		return storageCheck;
+	}
+
+	public void setStorageCheck(int storageCheck) {
+		this.storageCheck = storageCheck;
+	}
+
+	public int getAirportCheck() {
+		return airportCheck;
+	}
+
+	public void setAirportCheck(int airportCheck) {
+		this.airportCheck = airportCheck;
+	}
+
+	public int getTimeCapsuleCheck() {
+		return timeCapsuleCheck;
+	}
+
+	public void setTimeCapsuleCheck(int timeCapsuleCheck) {
+		this.timeCapsuleCheck = timeCapsuleCheck;
+	}
+
+	public int getOfficeCheck() {
+		return officeCheck;
+	}
+
+	public void setOfficeCheck(int officeCheck) {
+		this.officeCheck = officeCheck;
+	}
+
+	public int getDeliver() {
+		return deliver;
+	}
+
+	public void setDeliver(int deliver) {
+		this.deliver = deliver;
+	}
+
+	public String getLoginUserIdShadow() {
+		return loginUserIdShadow;
+	}
+
+	public void setLoginUserIdShadow(String loginUserIdShadow) {
+		this.loginUserIdShadow = loginUserIdShadow;
+	}
+
+	public DateUtil getDateUtil() {
+		return dateUtil;
+	}
+
+	public void setDateUtil(DateUtil dateUtil) {
+		this.dateUtil = dateUtil;
+	}
+
+	public int getCardType() {
+		return cardType;
+	}
+
+	public void setCardType(int cardType) {
+		this.cardType = cardType;
+	}
+
+	public String getCardNumber() {
+		return cardNumber;
+	}
+
+	public void setCardNumber(String cardNumber) {
+		this.cardNumber = cardNumber;
+	}
+
+	public String getNameOnCard() {
+		return nameOnCard;
+	}
+
+	public void setNameOnCard(String nameOnCard) {
+		this.nameOnCard = nameOnCard;
+	}
+
+	public String getCardExpiryDate() {
+		return cardExpiryDate;
+	}
+
+	public void setCardExpiryDate(String cardExpiryDate) {
+		this.cardExpiryDate = cardExpiryDate;
+	}
+
+	public short getCardCode() {
+		return cardCode;
+	}
+
+	public void setCardCode(short cardCode) {
+		this.cardCode = cardCode;
+	}
+
+	public float getPrice() {
+		return price;
+	}
+
+	public void setPrice(float price) {
+		this.price = price;
+	}
+}

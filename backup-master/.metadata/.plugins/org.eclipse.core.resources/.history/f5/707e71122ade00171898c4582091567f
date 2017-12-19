@@ -1,0 +1,35 @@
+package com.internousdev.shop.action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class TaxCalculate extends ActionSupport implements SessionAware{
+	private int memoryForm;
+	private int storageForm;
+	private int mouseForm;
+	private int fruitForm;
+	private int flowerForm;
+	private int pcType;
+	private float totalPrice1;
+	private float totalPrice2;
+	private int careCheck;
+	private int connector1Check;
+	private int connector2Check;
+	private int driveCheck;
+	private int storageCheck;
+	private int airportCheck;
+	private int timeCapsuleCheck;
+	private int officeCheck;
+	public float carePriceArray[] = new float[2];
+	public float connector1PriceArray[] = new float[2];
+	public float connector2PriceArray[] = new float[2];
+	public float drivePriceArray[] = new float[2];
+	public float storagePriceArray[] = new float[2];
+	public float airportPriceArray[] = new float[3];
+	public float timeCapsulePriceArray[] = new float[3];
+	public float officePriceArray[] = new float[5];
+	public Map<String, Object> session;
+}

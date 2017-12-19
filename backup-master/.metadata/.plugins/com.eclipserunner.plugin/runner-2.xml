@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<runner version="1.0.0">
+<category expanded="true" name="カテゴリーなし">
+<launchConfiguration bookmark="false" defaultLaunchMode="run" name="Houtou"/>
+<launchConfiguration bookmark="false" defaultLaunchMode="run" name="Houtou02"/>
+<launchConfiguration bookmark="false" defaultLaunchMode="run" name="Houtou02 (1)"/>
+<launchConfiguration bookmark="false" defaultLaunchMode="run" name="test"/>
+<launchConfiguration bookmark="false" defaultLaunchMode="run" name="testHoutou03"/>
+</category>
+</runner>

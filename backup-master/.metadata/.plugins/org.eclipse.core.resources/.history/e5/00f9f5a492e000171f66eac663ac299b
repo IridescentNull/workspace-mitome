@@ -1,0 +1,45 @@
+package com.internousdev.shop.action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.shop.util.DateUtil;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class PurchaseCompleteAction extends ActionSupport implements SessionAware{
+	private int itemTransactionId;
+	private String shippingUserName;
+	private String shippingCompanyName;
+	private String shippingAddress1;
+	private String shippingAddress2;
+	private String shippingUserCity;
+	private String shippingUserState;
+	private String shippingUserZIP;
+	private String shippingUserCountry;
+	private String shippingUserPhone;
+	private int careCheck;
+	private int connector1Check;
+	private int connector2Check;
+	private int driveCheck;
+	private int storageCheck;
+	private int airportCheck;
+	private int timeCapsuleCheck;
+	private int officeCheck;
+	private int deliver;
+	private String loginUserIdShadow;
+	private DateUtil dateUtil = new DateUtil();
+	public Map<String, Object> session;
+
+	public String execute(){
+		return SUCCESS;
+	}
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+}

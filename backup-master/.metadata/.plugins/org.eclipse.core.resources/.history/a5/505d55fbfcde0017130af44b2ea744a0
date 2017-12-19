@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+
+<struts>
+	<constant name="struts.devMode" value="true"/>
+	<package name="com.internousdev.shop.action" extends="struts-default">
+
+	<action name="IndexAction" class="com.internousdev.shop.action.IndexAction" method="execute">
+		<result name="success">login.jsp</result>
+	</action>
+
+	<action name="LoginAction" class="com.internousdev.shop.action.LoginAction" method="execute">
+		<result name="success">welcome.jsp</result>
+		<result name="error">login.jsp</result>
+	</action>
+
+	<action name="UserCreateAction" class="com.internousdev.shop.action.UserCreateAction" method="execute">
+		<result name="success">userCreate.jsp</result>
+	</action>
+
+	<action name="UserCreateConfirmAction" class="com.internousdev.shop.action.UserCreateConfirmAction" method="execute">
+		<result name="success">userCreateConfirm.jsp</result>
+		<result name="error">userCreate.jsp</result>
+	</action>
+
+	<action name="UserCreateCompleteAction" class="com.internousdev.shop.action.UserCreateCompleteAction" method="execute">
+		<result name="success">userCreateComplete.jsp</result>
+
+	</action>
+
+	<action name="DesktopAction" class="com.internousdev.shop.action.DesktopAction" method="execute">
+		<result name="success">desktop.jsp</result>
+	</action>
+
+	<action name="UserPageAction" class="com.internousdev.shop.action.UserPageAction" method="execute">
+		<result name="success">userPage.jsp</result>
+		<result name="error">login.jsp</result>
+	</action>
+
+	<action name="LogOutAction" class="com.internousdev.shop.action.LogOutAction" method="execute">
+		<result name="success">login.jsp</result>
+	</action>
+
+	<action name="UserInfoReviseAction" class="com.internousdev.shop.action.UserInfoReviseAction" method="execute">
+		<result name="success">userInfoRevise.jsp</result>
+				<result name="error">login.jsp</result>
+	</action>
+
+	<action name="UserInfoReviseConfirmAction" class="com.internousdev.shop.action.UserInfoReviseConfirmAction" method="execute">
+		<result name="success">userInfoReviseConfirm.jsp</result>
+		<result name="error">userInfoRevise.jsp</result>
+		<result name="none">login.jsp</result>
+	</action>
+
+	<action name="UserInfoReviseCompleteAction" class="com.internousdev.shop.action.UserInfoReviseCompleteAction" method="execute">
+		<result name="success">userInfoReviseComplete.jsp</result>
+	</action>
+
+	<action name="PasswordChangeAction" class="com.internousdev.shop.action.PasswordChangeAction" method="execute">
+		<result name="success">PasswordChange.jsp</result>
+	</action>
+
+	<action name="PasswordChangeCompleteAction" class="com.internousdev.shop.action.PasswordChangeCompleteAction" method="execute">
+		<result name="success">passwordChangeComplete.jsp</result>
+		<result name="error">PasswordChange.jsp</result>
+	</action>
+
+	<action name="WelcomeAction" class="com.internousdev.shop.action.WelcomeAction" method="execute">
+		<result name="success">welcome.jsp</result>
+	</action>
+
+	<action name="PerchaseAction" class="com.internousdev.shop.action.PerchaseAction" method="execute">
+		<result name="success">perchaseProgress.jsp</result>
+	</action>
+
+	<action name="PerchaseProgressAction" class="com.internousdev.shop.action.PerchaseProgressAction" method="execute">
+		<result name="success">bag.jsp</result>
+	</action>
+
+	<action name="DesktopRemoveAction" class="com.internousdev.shop.action.DesktopRemoveAction" method="execute">
+		<result name="success">bag.jsp</result>
+	</action>
+
+	<action name="TaxCalculate" class="com.internousdev.shop.action.TaxCalculate" method="execute">
+		<result name="success">bag.jsp</result>
+	</action>
+
+	<action name="BagAction" class="com.internousdev.shop.action.BagAction" method="execute">
+		<result name="success">checkOut.jsp</result>
+	</action>
+
+
+
+	</package>
+
+
+
+
+
+
+
+
+</struts>

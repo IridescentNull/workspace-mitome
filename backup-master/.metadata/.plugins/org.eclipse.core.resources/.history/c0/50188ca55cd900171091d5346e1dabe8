@@ -1,0 +1,20 @@
+</div>
+</div>
+<footer class="text-center" style="height: 180px;">
+
+		<p>Copyright &#x00A9; 2017 Orange Inc. All rights reserved.</p>
+
+
+</footer>
+<footer class="text-center perchase">
+
+		<ul class="list-inline">
+			<li>Get help buying: Chat now<br>Call 1-800-MY-APPLE</li>
+			<li>Pickup:<br>Check availability</li>
+		</ul>
+
+</footer>
+
+
+	<div id="test"></div>
+</body>

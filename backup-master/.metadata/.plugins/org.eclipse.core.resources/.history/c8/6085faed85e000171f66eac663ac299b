@@ -1,0 +1,14 @@
+use orange;
+create table buy_table(
+id int not null primary key auto_increment,
+item_transaction_id int,
+total_price int,
+shipping_user_name varchar(255),
+shipping_company_name varchar(255),
+shipping_address1 varchar(255),
+shipping_address2 varchar(255),
+shipping_user_city varchar(255),
+user_master_id varchar(16),
+pay varchar(30),
+insert_date datetime,
+);

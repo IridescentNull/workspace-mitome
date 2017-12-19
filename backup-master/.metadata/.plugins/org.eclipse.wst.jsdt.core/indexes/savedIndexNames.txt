@@ -1,0 +1,13 @@
+INDEX VERSION 1.3+C:\Users\internousdev\Desktop\workspace\workspace-mitome\backup-master\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3069134441.index
+3915913391.index
+726817018.index
+3040267609.index
+802478440.index
+129817423.index
+1902128165.index
+3258056143.index
+669947928.index
+1549101164.index
+4027675900.index
+1812490355.index

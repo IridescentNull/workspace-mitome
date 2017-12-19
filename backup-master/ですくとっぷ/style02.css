@@ -1,0 +1,25 @@
+.red{color:red;
+    background-color:tan;
+    font-family:"ヒラギノ角ゴ Pro W6c","MS Pゴシック","勘亭流","メイリオ";}
+
+h1{
+    color:blue;
+    font-size:100px;
+    text-align:center;
+    
+    }
+h3{
+    background-color:azure;
+    }
+ul{
+    list-style-type:circle;
+    }
+body{
+    color:darkslategrey;
+    line-height:1.2em;
+    }
+h3.s{
+    font-style:oblique;
+}
+#d{
+    font-style:oblique} 

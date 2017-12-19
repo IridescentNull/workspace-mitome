@@ -1,0 +1,34 @@
+package com.internousdev.shop.action;
+
+import java.util.Map;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class DesktopRemoveAction extends ActionSupport{
+	private int memoryForm;
+	private int storageForm;
+	private int mouseForm;
+	private int fruitForm;
+	private int flowerForm;
+	private int pcType;
+	private float totalPrice1;
+	private int careCheck;
+	private int connector1Check;
+	private int connector2Check;
+	private int driveCheck;
+	private int storageCheck;
+	private int airportCheck;
+	private int timeCapsuleCheck;
+	private int officeCheck;
+	public Map<String, Object> session;
+	public String execute(){
+		pcType = 0;
+		return SUCCESS;
+	}
+	public int getPcType() {
+		return pcType;
+	}
+	public void setPcType(int pcType) {
+		this.pcType = pcType;
+	}
+}

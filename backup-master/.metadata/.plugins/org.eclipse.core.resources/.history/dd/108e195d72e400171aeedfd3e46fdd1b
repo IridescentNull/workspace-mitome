@@ -1,0 +1,7 @@
+package com.internousdev.shop.dto;
+
+public class PurchaseHistoryDTO {
+	public int itemTransactionId;
+	public float totalPrice3;
+	public String shippingUserName;
+}

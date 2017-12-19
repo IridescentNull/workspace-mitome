@@ -1,0 +1,25 @@
+</div>
+</div>
+<footer class="text-center" style="height: 180px;">
+
+		<p>Copyright &#x00A9; 2017 Orange Inc. All rights reserved.</p>
+
+
+</footer>
+<footer class="text-center perchase">
+
+		<ul class="list-inline perchase-bottom">
+			<li>Get help buying:<br> Chat now<br>Call 7-8xx-MY-ORange<br>&nbsp;</li>
+			<li></li>
+			<li>Pickup:<br>Check availability<br>&nbsp;<br>&nbsp;</li>
+			<li></li>
+			<li>Delivery:<br>In Stock<br>Free Shipping<br>Get delivery dates</li>
+			<li></li>
+			<li><h3 style="color: gray;">$ <script>document.write(price);</script></h3><br>&nbsp;</li>
+		</ul>
+
+</footer>
+
+
+	<div id="test"></div>
+</body>

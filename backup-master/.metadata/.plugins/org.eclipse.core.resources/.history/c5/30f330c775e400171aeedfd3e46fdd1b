@@ -1,0 +1,19 @@
+package com.internousdev.shop.dao;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import com.internousdev.shop.dto.PurchaseHistoryDTO;
+import com.internousdev.shop.util.DBConnector;
+
+public class PurchaseHistoryDAO {
+	private DBConnector dbConnector = new DBConnector();
+	private Connection connection = dbConnector.getConnection();
+
+	public ArrayList<PurchaseHistoryDTO> getPurchaseHistory(String loginUserIdShadow) throws SQLException{
+	ArrayList<PurchaseHistoryDTO> purchaseHistoryDTO = new ArrayList<PurchaseHistoryDTO>();
+
+	String sql = "SELECT * FROM buy_table WHERE user_id = ?";
+	}
+}
