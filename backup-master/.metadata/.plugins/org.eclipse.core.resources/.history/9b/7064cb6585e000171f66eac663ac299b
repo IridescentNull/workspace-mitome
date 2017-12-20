@@ -1,9 +1,0 @@
-use orange;
-create table buy_table(
-id int not null primary key auto_increment,
-item_transaction_id int,
-total_price int,
-user_master_id varchar(16),
-pay varchar(30),
-insert_date datetime,
-);

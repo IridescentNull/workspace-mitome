@@ -16,10 +16,25 @@
 
 
 	<footer   data-spy="affix" data-offset-top="120" class="text-center perchase-progress-bar">
-	<ul class="list-inline">
-	<li><img src="desktop.png"  height = "100"></li>
-	<li><h4><strong><br>Desktop PC<br></strong>$<%=session.getAttribute("totalPrice1") %></h4></li>
-	<li>
+	<s:if test="pcType == 1 || pcType ==2">
+		<ul class="list-inline">
+	</s:if>
+	<s:if test="pcType == 0">
+		<ul style="list-style: none;">
+	</s:if>
+	<s:if test="pcType == 1">
+		<li><img src="desktop.png"  height = "100"></li>
+		<li><h4><strong><br>Desktop PC<br></strong>$<%=session.getAttribute("totalPrice1") %></h4></li>
+	</s:if>
+	<s:if test="pcType == 2">
+		<li><img src="laptop.png"  height = "100"></li>
+		<li><h4><strong><br>Desktop PC<br></strong>$<%=session.getAttribute("totalPrice1") %></h4></li>
+	</s:if>
+	<s:if test="pcType == 0">
+		<li><h3 style="color: gray">You progress without purchase of our PC</h3></li>
+		<li></li>
+	</s:if>
+		<li>
 
 	<s:form action="PerchaseProgressAction" class="text-center">
 		<input type="hidden" name="careCheck" id="careCheck" value="0">
@@ -30,7 +45,7 @@
 		<input type="hidden" name="airportCheck" id="airportCheck" value="0">
 		<input type="hidden" name="timeCapsuleCheck" id="timeCapsuleCheck" value="0">
 		<input type="hidden" name="officeCheck" id="officeCheck" value="0">
-		<input type="hidden" name="pcType" id="pcType" value=1>
+		<input type="hidden" name="pcType" id="pcType" value="<%=session.getAttribute("pcType") %>">
 		<input type="hidden" name="memoryForm" id="memoryForm" value="<%=session.getAttribute("memoryForm") %>">
 		<input type="hidden" name="storageForm" id="storageForm" value="<%=session.getAttribute("storageForm") %>">
 		<input type="hidden" name="mouseForm" id="mouseForm" value="<%=session.getAttribute("mouseForm") %>">

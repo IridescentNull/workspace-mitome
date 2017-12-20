@@ -96,6 +96,82 @@
 			</div>
 			</s:if>
 
+			<s:if test='pcType == 2'>
+			<p class="box"/>
+			<div class="row">
+				<div class="col-xs-3 text-center">
+					<img src="laptop.png" width ="100px">
+				</div>
+				<div class="col-xs-9">
+					<div class="inliner"><strong>Laptop</strong></div><div class="inliner-right"><strong>$<%=session.getAttribute("totalPrice1") %></strong></div>
+					<div style="line-height: 0.5;"><br></div>
+					<p class="box"/>
+					<div class="inliner"><small>Delivery: In Stock</small></div>
+					<div class=inliner-right>
+						<form action="DesktopRemoveAction">
+							<input type="hidden" name="memoryForm" value="<%=session.getAttribute("memoryForm") %>">
+							<input type="hidden" name="storageForm" value="<%=session.getAttribute("storageForm") %>">
+							<input type="hidden" name="mouseForm" value="<%=session.getAttribute("mouseForm") %>">
+							<input type="hidden" name="fruitForm" value="<%=session.getAttribute("fruitForm") %>">
+							<input type="hidden" name="flowerForm" value="<%=session.getAttribute("flowerForm") %>">
+							<input type="hidden" name="pcType" value="0">
+							<input type="hidden" name="totalPrice1" value=0>
+							<input type="hidden" name="careCheck" value="<%=session.getAttribute("careCheck") %>">
+							<input type="hidden" name="connector1Check" value="<%=session.getAttribute("connector1Check") %>">
+							<input type="hidden" name="connector2Check" value="<%=session.getAttribute("connector2Check") %>">
+							<input type="hidden" name="driveCheck" value="<%=session.getAttribute("driveCheck") %>">
+							<input type="hidden" name="storageCheck" value="<%=session.getAttribute("storageCheck") %>">
+							<input type="hidden" name="airportCheck" value="<%=session.getAttribute("airportCheck") %>">
+							<input type="hidden" name="timeCapsuleCheck" value="<%=session.getAttribute("timeCapsuleCheck") %>">
+							<input type="hidden" name="officeCheck" value="<%=session.getAttribute("officeCheck") %>">
+							<input type="hidden" name="tax" value="<%=session.getAttribute("tax")%>">
+ 							<button class="btn-link"><small>Remove</small></button>
+						</form>
+					</div>
+					<div class=inliner-right><small style="color: lightgray;">Part number: XXXXXXXXX</small></div>
+					<div class="row">
+						<div class="col-xs-6">
+							<strong>Hardware</strong><br>
+								<ul style="color: gray;">
+									<li>2.3GHz dual-leaf 7th-generation Garnish Core i5 fruit-processor, Turbo Boost up to 3.6GHz</li>
+									<div style="line-height: 0.5;"><br></div>
+									<li>
+										<s:if test='memoryForm == 0'>8GB 2133MHz DDR4</s:if>
+										<s:if test='memoryForm == 1'>16GB 2133MHz DDR4</s:if>
+									</li>
+									<div style="line-height: 0.5;"><br></div>
+									<li>
+										<s:if test='storageForm == 1'>128GB SSD storage</s:if>
+										<s:if test='storageForm == 2'>256GB SSD storage</s:if>
+										<s:if test='storageForm == 3'>512GB SSD storage</s:if>
+										<s:if test='storageForm == 4'>1TB SSD storage</s:if>
+									</li>
+									<div style="line-height: 0.5;"><br></div>
+									<li>Magic Keyboard - US English</li>
+									<div style="line-height: 0.5;"><br></div>
+									<li>Accessory Kit</li>
+								</ul>
+						</div>
+						<div class="col-xs-6">
+						<strong>Software</strong><br>
+								<ul style="color: gray;">
+									<li>Pages, Numbers, Keynote</li>
+									<div style="line-height: 0.5;"><br></div>
+									<li>Photos, iMovie, GarageBand</li>
+									<div style="line-height: 0.5;"><br></div>
+									<li>macOS</li>
+									<div style="line-height: 0.5;"><br></div>
+										<s:if test='fruitForm == 1'><li>Fruit Cut X</li><div style="line-height: 0.5;"><br></div></s:if>
+										<s:if test='flowerForm == 1'><li>Flower Petal X</li><div style="line-height: 0.5;"><br></div></s:if>
+								</ul>
+						</div>
+						<div class="col-xs-6">
+						</div>
+					</div>
+				</div>
+			</div>
+			</s:if>
+
 			<s:if test='careCheck == 1'>
 			<p class="box"/>
 			<div class="row">
@@ -308,9 +384,9 @@
 							<input type="hidden" name="storageCheck" value="<%=session.getAttribute("storageCheck") %>">
 							<input type="hidden" name="airportCheck" value=0>
 							<input type="hidden" name="timeCapsuleCheck" value="<%=session.getAttribute("timeCapsuleCheck") %>">
-							<input type="hidden" name="officeCheck" value="<%=session.getAttribute("officeCheck") %>"><button class="btn-link">
+							<input type="hidden" name="officeCheck" value="<%=session.getAttribute("officeCheck") %>">
 							<input type="hidden" name="tax" value="<%=session.getAttribute("tax")%>">
-							<small>Remove</small></button>
+							<button class="btn-link"><small>Remove</small></button>
 						</form>
 					</div>
 					<div class=inliner-right><small style="color: lightgray;">Part number: XXXXXXXXX</small></div>
@@ -347,7 +423,7 @@
 							<input type="hidden" name="timeCapsuleCheck" value=0>
 							<input type="hidden" name="officeCheck" value="<%=session.getAttribute("officeCheck") %>">
 							<input type="hidden" name="tax" value="<%=session.getAttribute("tax")%>">
-							<s:if test="tax == 1"><input type="hidden" name="tax" value=1></s:if>
+							<%-- <s:if test="tax == 1"><input type="hidden" name="tax" value=1></s:if> --%>
 							<button class="btn-link"><small>Remove</small></button>
 						</form>
 					</div>

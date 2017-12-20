@@ -125,6 +125,14 @@
 		<result name="error">login.jsp</result>
 	</action>
 
+	<action name="LaptopAction" class="com.internousdev.shop.action.LaptopAction" method="execute">
+		<result name="success">laptop.jsp</result>
+	</action>
+
+	<action name="AccessoriesAction" class="com.internousdev.shop.action.AccessoriesAction" method="execute">
+		<result name="success">perchaseProgress.jsp</result>
+	</action>
+
 
 	</package>
 

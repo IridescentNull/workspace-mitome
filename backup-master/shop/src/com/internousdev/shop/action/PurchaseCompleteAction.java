@@ -92,7 +92,12 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 			fruitForm = (int)session.get("fruitForm");
 			flowerForm = (int)session.get("flowerForm");
 			loginUserIdShadow = (String)session.get("loginUserIdShadow");
-			deliver = (int)session.get("pcOneDeliver");
+			if((int)session.get("pcType") == 1){
+				deliver = (int)session.get("pcOneDeliver");
+			}
+			if((int)session.get("pcType") == 2){
+				deliver = (int)session.get("pcTwoDeliver");
+			}
 			tax = (float)session.get("tax");
 			totalPrice3 = ((float)session.get("totalPrice1") * tax);
 			purchaseCompleteDAO.recordGoods(itemTransactionId, totalPrice3, shippingUserName, shippingCompanyName, shippingAddress1, shippingAddress2, shippingUserCity, shippingUserState, shippingUserZIP, shippingUserCountry, shippingUserPhone, memoryForm, storageForm, mouseForm, fruitForm, flowerForm, 0, deliver, loginUserIdShadow);
@@ -118,6 +123,9 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 		purchaseCompleteDAO.recordPay(shippingUserName, shippingCompanyName, shippingAddress1, shippingAddress2, shippingUserCity, shippingUserState, shippingUserZIP, shippingUserCountry, shippingUserPhone, cardType, cardNumber, nameOnCard, cardExpiryDate, cardCode, price, loginUserIdShadow) ;
 
 		connection.close();
+		session.clear();
+		session.put("loginUserIdShadow", loginUserIdShadow);
+		System.out.println(session);
 		return SUCCESS;
 	}
 

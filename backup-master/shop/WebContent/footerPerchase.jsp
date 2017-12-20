@@ -32,8 +32,8 @@
 					<input type="hidden" name="mouseForm" id="mouseForm" value="0">
 					<input type="hidden" name="fruitForm" id="fruitForm" value="0">
 					<input type="hidden" name="flowerForm" id="flowerForm" value="0">
-					<input type="hidden" name="pcType" value="1">
-					<button  value="perchase" class="btn-sm btn-primary ">PERCHASE</button>
+					<input type="hidden" name="pcType" value=<s:property value="pcType"/>>
+					<button  value="perchase" class="btn-sm btn-primary ">PURCHASE</button>
 				</s:form>
 			</li>
 		</ul>

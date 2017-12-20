@@ -2,16 +2,16 @@ package com.internousdev.shop.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class DesktopAction extends ActionSupport /*implements SessionAware*/{
-	//private String loginUserId;
-	//public Map<String, Object> session;
-	//private UserCreateCompleteDAO userCreateCompleteDAO=new UserCreateCompleteDAO();
+public class DesktopAction extends ActionSupport {
+	private int pcType;
 	public String execute(){
-		//loginUserId = session.get("loginUserId").toString();
+		pcType =1;
 		return SUCCESS;
 	}
-	//@Override
-	//public void setSession(Map<String, Object> session){
-		//this.session=session;
-	//}
+	public int getPcType() {
+		return pcType;
+	}
+	public void setPcType(int pcType) {
+		this.pcType = pcType;
+	}
 }

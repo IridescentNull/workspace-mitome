@@ -3,6 +3,7 @@
 <jsp:include page="header.jsp"/>
 	<table class="table table-striped">
 	<s:iterator value="purchaseHistoryDTOList">
+
 		<tr>
 			<td>
 				<div class="row">
@@ -10,63 +11,90 @@
 						<s:if test="itemTransactionId == 1">
 							<img src="desktop.gif" width ="200px">
 						</s:if>
+						<s:if test="itemTransactionId == 2">
+							<img src="laptop.png" width ="200px">
+						</s:if>
 						<s:if test="itemTransactionId == 3">
-							<img src="connector.jpg"  width ="200px">
+							<img src="Cure.jpg" width ="100px">
 						</s:if>
 						<s:if test="itemTransactionId == 4">
-							<img src="connector2.jpg"  width ="100px">
+							<img src="connector.jpg"  width ="200px">
 						</s:if>
 						<s:if test="itemTransactionId == 5">
-							 <div style="line-height: 0.5;"><br></div>
-							&nbsp;<br>
-							<img src="diskDrive.jpg"  width ="200px">
+							<img src="connector2.jpg"  width ="100px">
 						</s:if>
 						<s:if test="itemTransactionId == 6">
 							 <div style="line-height: 0.5;"><br></div>
 							&nbsp;<br>
-							<img src="mikan10.png"  width ="200px">
+							<img src="diskDrive.jpg"  width ="200px">
 						</s:if>
 						<s:if test="itemTransactionId == 7">
+							 <div style="line-height: 0.5;"><br></div>
+							&nbsp;<br>
+							<img src="mikan10.png"  width ="200px">
+						</s:if>
+						<s:if test="itemTransactionId == 8">
 							&nbsp;<br>
 							<img src="kuukou.png"  width ="200px">
+						</s:if>
+						<s:if test="itemTransactionId == 9">
+							&nbsp;<br>
+							<img src="timeCapsule.jpg"  width ="200px">
+						</s:if>
+						<s:if test="itemTransactionId == 10">
+							&nbsp;<br>
+							<img src="office.jpg"width ="200px">
 						</s:if>
 					</div>
 					<div class="col-sm-4">
 						<s:if test="itemTransactionId == 1">
 							<h4><strong>Desktop PC</strong></h4>
 						</s:if>
+						<s:if test="itemTransactionId == 2">
+							<h4><strong>Laptop</strong></h4>
+						</s:if>
 						<s:if test="itemTransactionId == 3">
-							<h5><strong>Thunderbolt 3 (USB‑C) to Thunderbolt 2 Adapter</strong></h5>
+							<h5><strong>ORgangeCare+ for above PC</strong></h5>
 						</s:if>
 						<s:if test="itemTransactionId == 4">
-							<h5><strong>USB-C Digital AV Multiport Adapter</strong></h5>
+							<h5><strong>Thunderbolt 3 (USB‑C) to Thunderbolt 2 Adapter</strong></h5>
 						</s:if>
 						<s:if test="itemTransactionId == 5">
-							<h5><strong>Apple USB SuperDrive</strong></h5>
+							<h5><strong>USB-C Digital AV Multiport Adapter</strong></h5>
 						</s:if>
 						<s:if test="itemTransactionId == 6">
-							<h5><strong>PROMISE Pegasus3 R4 12TB (4 by 3TB) RAID Storage</strong></h5>
+							<h5><strong>Apple USB SuperDrive</strong></h5>
 						</s:if>
 						<s:if test="itemTransactionId == 7">
+							<h5><strong>PROMISE Pegasus3 R4 12TB (4 by 3TB) RAID Storage</strong></h5>
+						</s:if>
+						<s:if test="itemTransactionId == 8">
 							<h5><strong>AirPort <s:if test='accessoriesType == 1'>Express</s:if><s:if test='accessoriesType == 2'>Extreme</s:if></strong></h5>
 						</s:if>
-						Name: <s:property value="shippingUserName"/><br>
-
-						 <div style="line-height: 0.5;"><br></div>
-						Address: <s:property value="shippingAddress1"/><br>
-						 <s:property value="shippingAddress2"/>
-						 <div style="line-height: 0.5;"><br></div>
-						time of order:<br> <s:property value="insertDate"/><br>
-						<s:if test="deliver == 0">
-						(Shipping: Two Days Later)<br>
+						<s:if test="itemTransactionId == 9">
+							<h5><strong>AirPort Time Capsule <s:if test='accessoriesType == 1'>- 2TB</s:if><s:if test='accessoriesType == 2'>- 3TB</s:if></strong></h5>
 						</s:if>
-						<s:if test="deliver == 1">
-						(Same Day Shipping)<br>
+						<s:if test="itemTransactionId == 10">
+							<h5><strong>Microsoft Office <s:if test='accessoriesType == 1'>365 Home (1-year Subscription; 5 Licenses)</s:if><s:if test='accessoriesType== 2'>365 Personal (1-year Subscription; 1 License)</s:if><s:if test='accessoriesType== 3'>Home & Student 2016 for Mac</s:if><s:if test='accessoriesType== 4'>Home & Business 2016 for Mac</s:if></strong></h5>
 						</s:if>
-						<s:if test="deliver == 2">
-						(Please pick up by yourself!)<br>
+						<s:if test="itemTransactionId != 3">
+							Name: <s:property value="shippingUserName"/><br>
+							 <div style="line-height: 0.5;"><br></div>
+							Address: <s:property value="shippingAddress1"/><br>
+							 <s:property value="shippingAddress2"/>
+							 <div style="line-height: 0.5;"><br></div>
+							time of order:<br> <s:property value="insertDate"/><br>
+							<s:if test="deliver == 0">
+							(Shipping: Two Days Later)<br>
+							</s:if>
+							<s:if test="deliver == 1">
+							(Same Day Shipping)<br>
+							</s:if>
+							<s:if test="deliver == 2">
+							(Please pick up by yourself!)<br>
+							</s:if>
+							<div style="line-height: 0.5;"><br></div>
 						</s:if>
-						<div style="line-height: 0.5;"><br></div>
 						Tax-included price: <strong>$<s:property value="totalPrice3"/></strong>
 					</div>
 					<div class="col-sm-4">
@@ -87,13 +115,13 @@
 										<s:if test='storageForm == 3'>512GB SSD</s:if>
 										<s:if test='storageForm == 4'>1TB SSD</s:if>
 									</li>
-
-									<li>
-										<s:if test='mouseForm == 0'>Magic Mouse 2</s:if>
-										<s:if test='mouseForm == 1'>Magic Trackpad 2</s:if>
-										<s:if test='mouseForm == 2'>Magic Mouse 2 + Trackpad 2</s:if>
-									</li>
-
+									<s:if test="itemTransactionId == 1">
+										<li>
+											<s:if test='mouseForm == 0'>Magic Mouse 2</s:if>
+											<s:if test='mouseForm == 1'>Magic Trackpad 2</s:if>
+											<s:if test='mouseForm == 2'>Magic Mouse 2 + Trackpad 2</s:if>
+										</li>
+									</s:if>
 									<li>Magic Keyboard - US English</li>
 
 									<li>Accessory Kit</li>
@@ -103,6 +131,7 @@
 				</div>
 			</td>
 		</tr>
+
 	</s:iterator>
 
 	</table>

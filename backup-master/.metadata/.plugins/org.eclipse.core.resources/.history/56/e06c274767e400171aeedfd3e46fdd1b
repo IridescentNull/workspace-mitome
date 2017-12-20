@@ -1,5 +1,0 @@
-package com.internousdev.shop.dao;
-
-public class PurchaseHistoryDAO {
-
-}

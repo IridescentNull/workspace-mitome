@@ -39,6 +39,7 @@ public class UserCreateCompleteAction extends ActionSupport implements SessionAw
 				);
 		result=SUCCESS;
 		this.loginUserIdShadow = session.get("loginUserId").toString();
+		session.clear();
 		session.put("loginUserIdShadow",loginUserIdShadow);
 
 		return result;

@@ -14,6 +14,17 @@
 		document.getElementById("pcOneButton").className="btn-link"
 	}
 
+	function PcTwoShow(){
+		document.getElementById("pcTwo").className="row";
+		document.getElementById("pcTwoButtonReverse").className="btn-link"
+		document.getElementById("pcTwoButton").className="btn-link hidden"
+	}
+	function PcTwoHide(){
+		document.getElementById("pcTwo").className="row hidden";
+		document.getElementById("pcTwoButtonReverse").className="btn-link hidden"
+		document.getElementById("pcTwoButton").className="btn-link"
+	}
+
 	var date=new Date();
 	var week=date.getDay();
 	var yobi= new Array("Sun","Mon","Tus","Wen","Thr","Fri","Sat");
@@ -33,6 +44,15 @@
 	}
 	function pcOneDeliverTwo(){
 		document.getElementById("pcOneDeliver").value = 2;
+	}
+	function pcTwoDeliverZero(){
+		document.getElementById("pcTwoDeliver").value = 0;
+	}
+	function pcTwoDeliverOne(){
+		document.getElementById("pcTwoDeliver").value = 1;
+	}
+	function pcTwoDeliverTwo(){
+		document.getElementById("pcTwoDeliver").value = 2;
 	}
 	function connectorOneDeliverZero(){
 		document.getElementById("connectorOneDeliver").value = 0;
@@ -212,6 +232,145 @@
 						</div>
 					</div>
 					<div id="pcOne" class="row hidden">
+						<div class="col-xs-6">
+							<strong>Hardware</strong><br>
+								<ul style="color: gray;">
+									<li>2.3GHz dual-leaf 7th-generation Garnish Core i5 fruit-processor, Turbo Boost up to 3.6GHz</li>
+									<div style="line-height: 0.5;"><br></div>
+									<li>
+										<s:if test='memoryForm == 0'>8GB 2133MHz DDR4</s:if>
+										<s:if test='memoryForm == 1'>16GB 2133MHz DDR4</s:if>
+										<s:if test='memoryForm == 2'>32GB 2133MHz DDR4</s:if>
+									</li>
+									<div style="line-height: 0.5;"><br></div>
+									<li>
+										<s:if test='storageForm == 0'>1TB Cereal Food ATA Drive</s:if>
+										<s:if test='storageForm == 1'>2TB Cereal Food ATA Drive</s:if>
+										<s:if test='storageForm == 2'>256GB SSD</s:if>
+										<s:if test='storageForm == 3'>512GB SSD</s:if>
+										<s:if test='storageForm == 4'>1TB SSD</s:if>
+									</li>
+									<div style="line-height: 0.5;"><br></div>
+									<li>
+										<s:if test='mouseForm == 0'>Magic Mouse 2</s:if>
+										<s:if test='mouseForm == 1'>Magic Trackpad 2</s:if>
+										<s:if test='mouseForm == 2'>Magic Mouse 2 + Trackpad 2</s:if>
+									</li>
+									<div style="line-height: 0.5;"><br></div>
+									<li>Magic Keyboard - US English</li>
+									<div style="line-height: 0.5;"><br></div>
+									<li>Accessory Kit</li>
+								</ul>
+						</div>
+						<div class="col-xs-6">
+						<strong>Software</strong><br>
+								<ul style="color: gray;">
+									<li>Pages, Numbers, Keynote</li>
+									<div style="line-height: 0.5;"><br></div>
+									<li>Photos, iMovie, GarageBand</li>
+									<div style="line-height: 0.5;"><br></div>
+									<li>macOS</li>
+									<div style="line-height: 0.5;"><br></div>
+										<s:if test='fruitForm == 1'><li>Fruit Cut X</li><div style="line-height: 0.5;"><br></div></s:if>
+										<s:if test='flowerForm == 1'><li>Flower Petal X</li><div style="line-height: 0.5;"><br></div></s:if>
+								</ul>
+						</div>
+					</div>
+					<s:if test='careCheck == 1'>
+						<small><b>Services and Support</b></small><br>
+						<div class="row">
+							<div class="col-xs-3 text-right">
+								<img src="Cure.jpg"  width ="50px">
+							</div>
+							<div class="col-xs-9">
+								<div class="inliner"><small>ORgangeCare+ for PC</small></div><div class="inliner-right"><small><b>$169.00</b></small></div>
+								<div style="line-height: 0.5;"><br></div>
+							</div>
+						</div>
+					</s:if>
+					<a href="recycleFee.jsp" target="_blank"><button class="btn-link btn-sm">Recycle fee</button></a>
+				</div>
+			</div>
+			<br>
+			</s:if>
+			<s:if test='pcType == 2'>
+			<p class="box"/>
+			<div class="row">
+				<div class="col-xs-3 text-center">
+					<br>
+					<br>
+					<img src="laptop.png" width ="100px">
+				</div>
+				<div class="col-xs-9">
+					<div class="inliner"><strong>Laptop PC</strong>&nbsp;<span style="color: gray;">|</span>&nbsp;<button id="pcTwoButton" class="btn-link" onClick="PcTwoShow()"><small>Show Product Details</small></button><button id="pcTwoButtonReverse" class="btn-link hidden" onClick="PcTwoHide()"><small>Hide Product Details</small></button></div><div class="inliner-right"><strong>$<%=session.getAttribute("totalPrice1") %></strong></div>
+					<div style="line-height: 0.5;"><br></div>
+					<div class="panel panel-default">
+						<div class="panel-footer">
+							<s:if test='continueFlug != 1'>
+							<div class="row">
+								<div class="col-xs-2">
+									<small>Ship:</small>
+								</div>
+								<div class="col-xs-10">
+								<small>
+									<input type="radio" name="pcTwoDeliver" checked="checked" onClick="pcTwoDeliverZero()">&nbsp;Delivers <script>document.write(yobi[twoAfterWeek]+"&nbsp"+ months[twoAfterMonth] + "&nbsp;" + twoAfterDay);</script> - Free<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get it Tomorrow when you select Next Day Shipping
+								</small><br>
+								<small>
+									<input type="radio" name="pcTwoDeliver" onClick="pcTwoDeliverOne()">&nbsp;Delivers Tomorrow - $9.00 for all eligible items
+								</small></div>
+							</div>
+							<div class="row">
+								<div class="col-xs-2">
+									<small>Pick up:</small>
+								</div>
+								<div class="col-xs-10">
+								<small>
+									<input type="radio" name="pcTwoDeliver" onClick="pcTwoDeliverTwo()">&nbsp;Available Today at ORange eternal Loop
+								</small></div>
+							</div>
+							</s:if>
+							<s:if test='continueFlug == 1'>
+								<s:if test='pcTwoDeliver == 0'>
+									<div class="row">
+										<div class="col-xs-2">
+											<small>Ship:</small>
+										</div>
+										<div class="col-xs-10">
+											<small>
+												Delivers <script>document.write(yobi[twoAfterWeek]+"&nbsp"+ months[twoAfterMonth] + "&nbsp;" + twoAfterDay);</script> - Free<br>
+											</small>
+										</div>
+									</div>
+								</s:if>
+								<s:if test='pcTwoDeliver == 1'>
+									<div class="row">
+										<div class="col-xs-2">
+											<small>Ship:</small>
+										</div>
+										<div class="col-xs-10">
+											<small>
+												Delivers Tomorrow - $9.00 for all eligible items
+											</small>
+										</div>
+									</div>
+								</s:if>
+								<s:if test='pcTwoDeliver == 2'>
+									<div class="row">
+										<div class="col-xs-2">
+											<small>Pick up:</small>
+										</div>
+										<div class="col-xs-10">
+											<small>
+												Available Today <span style="color: gray">at ORange eternal Loop</span>
+											</small>
+										</div>
+									</div>
+								</s:if>
+							</s:if>
+						</div>
+					</div>
+					<div id="pcTwo" class="row hidden">
 						<div class="col-xs-6">
 							<strong>Hardware</strong><br>
 								<ul style="color: gray;">
@@ -850,6 +1009,7 @@
 						<input type="hidden" name="tax" value="<%=session.getAttribute("tax")%>">
 						<input type="hidden" name="continueFlug" value="1">
 						<input type="hidden" id="pcOneDeliver" name="pcOneDeliver" value=0>
+						<input type="hidden" id="pcTwoDeliver" name="pcTwoDeliver" value=0>
 						<input type="hidden" id="connectorOneDeliver" name="connectorOneDeliver" value=0>
 						<input type="hidden" id="connectorTwoDeliver" name="connectorTwoDeliver" value=0>
 						<input type="hidden" id="driveDeliver" name="driveDeliver" value=0>
@@ -1175,6 +1335,137 @@
 										<s:if test='mouseForm == 0'>Magic Mouse 2</s:if>
 										<s:if test='mouseForm == 1'>Magic Trackpad 2</s:if>
 										<s:if test='mouseForm == 2'>Magic Mouse 2 + Trackpad 2</s:if>
+									</li>
+									<div style="line-height: 0.5;"><br></div>
+									<li>Magic Keyboard - US English</li>
+									<div style="line-height: 0.5;"><br></div>
+									<li>Accessory Kit</li>
+								</ul>
+						</div>
+						<div class="col-xs-6">
+						<strong>Software</strong><br>
+								<ul style="color: gray;">
+									<li>Pages, Numbers, Keynote</li>
+									<div style="line-height: 0.5;"><br></div>
+									<li>Photos, iMovie, GarageBand</li>
+									<div style="line-height: 0.5;"><br></div>
+									<li>macOS</li>
+									<div style="line-height: 0.5;"><br></div>
+										<s:if test='fruitForm == 1'><li>Fruit Cut X</li><div style="line-height: 0.5;"><br></div></s:if>
+										<s:if test='flowerForm == 1'><li>Flower Petal X</li><div style="line-height: 0.5;"><br></div></s:if>
+								</ul>
+						</div>
+					</div>
+					<s:if test='careCheck == 1'>
+						<small><b>Services and Support</b></small><br>
+						<div class="row">
+							<div class="col-xs-3 text-right">
+								<img src="Cure.jpg"  width ="50px">
+							</div>
+							<div class="col-xs-9">
+								<div class="inliner"><small>ORgangeCare+ for PC</small></div><div class="inliner-right"><small><b>$169.00</b></small></div>
+								<div style="line-height: 0.5;"><br></div>
+							</div>
+						</div>
+					</s:if>
+					<a href="recycleFee.jsp" target="_blank"><button class="btn-link btn-sm">Recycle fee</button></a>
+				</div>
+			</div>
+			<br>
+			</s:if>
+			<s:if test='pcType == 2'>
+			<p class="box"/>
+			<div class="row">
+				<div class="col-xs-3 text-center">
+					<br>
+					<br>
+					<img src="laptop.png" width ="100px">
+				</div>
+				<div class="col-xs-9">
+					<div class="inliner"><strong>Laptop</strong>&nbsp;<span style="color: gray;">|</span>&nbsp;<button id="pcTwoButton" class="btn-link" onClick="PcTwoShow()"><small>Show Product Details</small></button><button id="pcTwoButtonReverse" class="btn-link hidden" onClick="PcTwoHide()"><small>Hide Product Details</small></button></div><div class="inliner-right"><strong>$<%=session.getAttribute("totalPrice1") %></strong></div>
+					<div style="line-height: 0.5;"><br></div>
+					<div class="panel panel-default">
+						<div class="panel-footer">
+							<s:if test='continueFlug != 1 && continueFlug != 3'>
+							<div class="row">
+								<div class="col-xs-2">
+									<small>Ship:</small>
+								</div>
+								<div class="col-xs-10">
+								<small>
+									<input type="radio" name="pcTwoDeliver" checked="checked" onClick="pcTwoDeliverZero()">&nbsp;Delivers <script>document.write(yobi[twoAfterWeek]+"&nbsp"+ months[twoAfterMonth] + "&nbsp;" + twoAfterDay);</script> - Free<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get it Tomorrow when you select Next Day Shipping
+								</small><br>
+								<small>
+									<input type="radio" name="pcTwoDeliver" onClick="pcTwoDeliverOne()">&nbsp;Delivers Tomorrow - $9.00 for all eligible items
+								</small></div>
+							</div>
+							<div class="row">
+								<div class="col-xs-2">
+									<small>Pick up:</small>
+								</div>
+								<div class="col-xs-10">
+								<small>
+									<input type="radio" name="pcTwoDeliver" onClick="pcTwoDeliverTwo()">&nbsp;Available Today at ORange eternal Loop
+								</small></div>
+							</div>
+							</s:if>
+							<s:if test='continueFlug == 1 || continueFlug == 3'>
+								<s:if test='pcTwoDeliver == 0'>
+									<div class="row">
+										<div class="col-xs-2">
+											<small>Ship:</small>
+										</div>
+										<div class="col-xs-10">
+											<small>
+												Delivers <script>document.write(yobi[twoAfterWeek]+"&nbsp"+ months[twoAfterMonth] + "&nbsp;" + twoAfterDay);</script> - Free<br>
+											</small>
+										</div>
+									</div>
+								</s:if>
+								<s:if test='pcTwoDeliver == 1'>
+									<div class="row">
+										<div class="col-xs-2">
+											<small>Ship:</small>
+										</div>
+										<div class="col-xs-10">
+											<small>
+												Delivers Tomorrow - $9.00 for all eligible items
+											</small>
+										</div>
+									</div>
+								</s:if>
+								<s:if test='pcTwoDeliver == 2'>
+									<div class="row">
+										<div class="col-xs-2">
+											<small>Pick up:</small>
+										</div>
+										<div class="col-xs-10">
+											<small>
+												Available Today <span style="color: gray">at ORange eternal Loop</span>
+											</small>
+										</div>
+									</div>
+								</s:if>
+							</s:if>
+						</div>
+					</div>
+					<div id="pcTwo" class="row hidden">
+						<div class="col-xs-6">
+							<strong>Hardware</strong><br>
+								<ul style="color: gray;">
+									<li>2.3GHz dual-leaf 7th-generation Garnish Core i5 fruit-processor, Turbo Boost up to 3.6GHz</li>
+									<div style="line-height: 0.5;"><br></div>
+									<li>
+										<s:if test='memoryForm == 0'>8GB 2133MHz DDR4</s:if>
+										<s:if test='memoryForm == 1'>16GB 2133MHz DDR4</s:if>
+									</li>
+									<div style="line-height: 0.5;"><br></div>
+									<li>
+										<s:if test='storageForm == 1'>128GB SSD storage</s:if>
+										<s:if test='storageForm == 2'>256GB SSD storage</s:if>
+										<s:if test='storageForm == 3'>512GB SSD storage</s:if>
+										<s:if test='storageForm == 4'>1TB SSD storage</s:if>
 									</li>
 									<div style="line-height: 0.5;"><br></div>
 									<li>Magic Keyboard - US English</li>
@@ -1832,15 +2123,4 @@
 			<p class="box"/>
 		</div>
 	</div>
-	<s:property value='freeShipFlug'/>
-
-
-
-
-
-
-
-
-
-
 <jsp:include page="footer.jsp"/>

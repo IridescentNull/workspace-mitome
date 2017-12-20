@@ -30,6 +30,7 @@ public class CheckOutContinueAction extends ActionSupport implements SessionAwar
 	private int officeCheck;
 	private int continueFlug;
 	private int pcOneDeliver;
+	private int pcTwoDeliver;
 	private int connectorOneDeliver;
 	private int connectorTwoDeliver;
 	private int driveDeliver;
@@ -106,6 +107,7 @@ public class CheckOutContinueAction extends ActionSupport implements SessionAwar
 		session.put("totalPrice2", totalPrice2);
 		session.put("tax", tax);
 		session.put("pcOneDeliver", pcOneDeliver);
+		session.put("pcTwoDeliver", pcTwoDeliver);
 		session.put("connectorOneDeliver", connectorOneDeliver);
 		session.put("connectorTwoDeliver", connectorTwoDeliver);
 		session.put("driveDeliver", driveDeliver);
@@ -115,7 +117,7 @@ public class CheckOutContinueAction extends ActionSupport implements SessionAwar
 		session.put("officeDeliver", officeDeliver);
 		System.out.println(session);
 		freeShipFlug = 0;
-		if((int)session.get("pcOneDeliver") == 1 ||(int)session.get("connectorOneDeliver") == 1 ||  (int)session.get("connectorTwoDeliver") == 1 || (int)session.get("driveDeliver") == 1 || (int)session.get("storageDeliver") == 1 || (int)session.get("airportDeliver") == 1 || (int)session.get("timeCapsuleDeliver") == 1 || (int)session.get("officeDeliver") == 1){
+		if((int)session.get("pcOneDeliver") == 1 || (int)session.get("pcTwoDeliver") == 1 || (int)session.get("connectorOneDeliver") == 1 ||  (int)session.get("connectorTwoDeliver") == 1 || (int)session.get("driveDeliver") == 1 || (int)session.get("storageDeliver") == 1 || (int)session.get("airportDeliver") == 1 || (int)session.get("timeCapsuleDeliver") == 1 || (int)session.get("officeDeliver") == 1){
 			freeShipFlug = 1;
 		}
 		if(session.containsKey("loginUserIdShadow")){
@@ -440,5 +442,12 @@ public class CheckOutContinueAction extends ActionSupport implements SessionAwar
 
 	public void setLoginPassword(String loginPassword) {
 		this.loginPassword = loginPassword;
+	}
+	public int getPcTwoDeliver() {
+		return pcTwoDeliver;
+	}
+
+	public void setPcTwoDeliver(int pcTwoDeliver) {
+		this.pcTwoDeliver = pcTwoDeliver;
 	}
 }

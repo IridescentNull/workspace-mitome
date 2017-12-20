@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="リソース &apos;ChkLoadJddbc&apos; を削除" deleteContents="false" description="リソース &apos;ChkLoadJddbc&apos; を削除" element1="/ChkLoadJddbc" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1508462416414"/>&#x0A;<refactoring comment="リソース &apos;ChkLoadJdbc&apos; を削除" deleteContents="true" description="リソース &apos;ChkLoadJdbc&apos; を削除" element1="/ChkLoadJdbc" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1508467383326"/>
-</session>

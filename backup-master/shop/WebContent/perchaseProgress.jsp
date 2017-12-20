@@ -44,18 +44,23 @@
 				var capsuleSelect = 1;
 				function CareSubmit(){
 					document.getElementById('careCheck').value=1;
+					document.getElementById('careHidden').className="text-center transparent-sought";
 				}
 				function Connector1Submit(){
 					document.getElementById('connector1Check').value=1;
+					document.getElementById('connector1Hidden').className="text-center transparent-sought";
 				}
 				function Connector2Submit(){
 					document.getElementById('connector2Check').value=1;
+					document.getElementById('connector2Hidden').className="text-center transparent-sought";
 				}
 				function DriveSubmit(){
 					document.getElementById('driveCheck').value=1;
+					document.getElementById('driveHidden').className="text-center transparent-sought";
 				}
 				function StorageSubmit(){
 					document.getElementById('storageCheck').value=1;
+					document.getElementById('storageHidden').className="text-center transparent-sought";
 				}
 				function AirportSelectOne(){
 					airportSelect=1;
@@ -69,10 +74,12 @@
 				}
 				function AirportSubmit(){
 					document.getElementById('airportCheck').value=airportSelect;
+					document.getElementById('airportHidden').className="text-center transparent-sought";
 
 				}
 				function CapsuleSubmit(){
 					document.getElementById('timeCapsuleCheck').value=capsuleSelect;
+					document.getElementById('timeCapsuleHidden').className="text-center transparent-sought";
 				}
 				function OfficeSelectOne(){
 					officeSelect=1;
@@ -96,9 +103,18 @@
 				}
 				function OfficeSubmit(){
 					document.getElementById('officeCheck').value=officeSelect;
+					document.getElementById('officeHidden').className="text-center transparent-sought";
 				}
 			</script>
-			<button  value="perchase" class="btn-block btn-lg btn-primary" onClick="CareSubmit()">Add to Bag</button>
+			<s:if test="pcType != 0">
+				<button  value="perchase" class="btn-block btn-lg btn-primary" onClick="CareSubmit()">Add to Bag</button>
+			</s:if>
+			<s:if test="pcType == 0">
+				<button  value="perchase" class="btn btn-block btn-lg btn-primary" onClick="CareSubmit()" disabled="disabled">Only with PC</button>
+			</s:if>
+			<br>
+			<br>
+			<div id="careHidden" class="transparent"><h4>Item added to bag</h4></div>
 
 		</div>
 		<div class="col-sm-4">
@@ -114,6 +130,9 @@
 			<br>
 			<br>
 			<button  value="perchase" class="btn-block btn-lg btn-primary" onClick="Connector1Submit()">Add to Bag</button>
+			<br>
+			<br>
+			<div id="connector1Hidden" class="transparent"><h4>Item added to bag</h4></div>
 		</div>
 		<div class="col-sm-4">
 			<div class="text-center"><img src="connector2.jpg" height="200px"></div>
@@ -125,6 +144,9 @@
 			<br>
 			<br>
 			<button  value="perchase" class="btn-block btn-lg btn-primary" onClick="Connector2Submit()">Add to Bag</button>
+			<br>
+			<br>
+			<div id="connector2Hidden" class="transparent"><h4>Item added to bag</h4></div>
 		</div>
 	</div><!-- rowの閉じ -->
 
@@ -144,6 +166,9 @@
 			<br>
 			<br>
 			<button  value="perchase" class="btn-block btn-lg btn-primary" onClick="DriveSubmit()">Add to Bag</button>
+			<br>
+			<br>
+			<div id="driveHidden" class="transparent"><h4>Item added to bag</h4></div>
 		</div>
 		<div class="col-sm-4">
 			<div class="text-center"><img src="mikan10.png" height="200px"></div>
@@ -156,6 +181,9 @@
 			<br>
 			<br>
 			<button  value="perchase" class="btn-block btn-lg btn-primary" onClick="StorageSubmit()">Add to Bag</button>
+			<br>
+			<br>
+			<div id="storageHidden" class="transparent"><h4>Item added to bag</h4></div>
 		</div>
 
 		<div class="col-sm-4">
@@ -177,6 +205,9 @@
 			<br>
 			<br>
 			<button  value="perchase" id="airportButton" class="btn btn-block btn-lg btn-primary" onClick="AirportSubmit()" disabled="disabled" >Add to Bag</button>
+			<br>
+			<br>
+			<div id="airportHidden" class="transparent"><h4>Item added to bag</h4></div>
 		</div>
 	</div><!-- rowの閉じ -->
 
@@ -212,6 +243,9 @@
 			<br>
 			<div style="line-height: 0.5;"><br></div>
 			<button  value="perchase" class="btn-block btn-lg btn-primary" onClick="CapsuleSubmit()">Add to Bag</button>
+			<br>
+			<br>
+			<div id="timeCapsuleHidden" class="transparent"><h4>Item added to bag</h4></div>
 		</div>
 		<div class="col-sm-4">
 			<div class="text-center"><img src="office.jpg" height="200px"></div>
@@ -244,6 +278,9 @@
 			</div>
 			<br>
 			<button  value="perchase"  id="officeButton" class="btn btn-block btn-lg btn-primary" onClick="OfficeSubmit()" disabled="disabled">Add to Bag</button>
+			<br>
+			<br>
+			<div id="officeHidden" class="transparent"><h4>Item added to bag</h4></div>
 		</div>
 
 		<div class="col-sm-4">
@@ -254,6 +291,6 @@
 
 
 
-<%-- 	<s:property value="totalPrice1" escape="false"/> --%>
+
 	<s:property value="mouseForm" escape="false"/>
 <jsp:include page="footerPerchaseProgress.jsp"/>

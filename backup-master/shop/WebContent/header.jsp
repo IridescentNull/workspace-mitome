@@ -281,7 +281,13 @@
 	div.inliner-right{
 		text-align: right;
 	}
-
+	div.transparent{
+		opacity: 0;
+	}
+	div.transparent-sought{
+		opacity: 1;
+		transition: 0.8s;
+	}
 	div.hidden{
 		style="display: none;"
 	}

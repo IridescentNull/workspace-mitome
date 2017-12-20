@@ -10,21 +10,31 @@
 		<div class="text-center">
 			<form action="DesktopAction">
 				<img src="desktop.gif" height="180">
-				<button value="PURCHASE" Class="btn-primary btn-lg btn-block">PERCHASE</button>
+				<button value="PURCHASE" Class="btn-primary btn-lg btn-block">PURCHASE</button>
 			</form>
 		</div>
 	</div>
 
 	<div class="col-sm-4"><h2 class="text-center">Laptop</h2>
 		<br>
-		<div class="text-center"><img src="laptop.jpg" height="180"></div>
+		<div class="text-center">
+			<form action="LaptopAction">
+				<img src="laptop.jpg" height="180">
+				<button value="PURCHASE" Class="btn-primary btn-lg btn-block">PURCHASE</button>
+			</form>
+		</div>
 	</div>
 
 
 
-	<div class="col-sm-4"><h2 class="text-center">Phone</h2>
+	<div class="col-sm-4"><h2 class="text-center">Accessories</h2>
 		<br>
-		<div class="text-center"><img src="phone.jpg" height="180"></div>
+		<div class="text-center">
+			<form action="AccessoriesAction">
+				<img src="phone.jpg" height="180">
+				<button value="PURCHASE" Class="btn-primary btn-lg btn-block">PURCHASE</button>
+			</form>
+		</div>
 	</div>
 
 <jsp:include page="footer.jsp"/>
