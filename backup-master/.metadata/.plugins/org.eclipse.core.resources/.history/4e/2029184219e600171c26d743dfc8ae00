@@ -1,0 +1,24 @@
+package com.internousdev.shop.action;
+
+import java.sql.SQLException;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.shop.dao.GeneralUserDAO;
+import com.internousdev.shop.dto.UserInfoDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class GeneralUserAction extends ActionSupport implements SessionAware{
+
+	public Map<String, Object> session;
+	private GeneralUserDAO dao = new GeneralUserDAO();
+	private UserInfoDTO dto = new UserInfoDTO();
+
+	public String execute() throws SQLException{
+		if (!session.containsKey("administratorIdShadow")){
+			return ERROR;
+		}
+	}
+
+}

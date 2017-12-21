@@ -1,0 +1,14 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<jsp:include page="headerAdministratorsScreen.jsp"/>
+
+</div>
+</div>
+
+<footer>
+<div class="background-top-white"></div><!-- ヘッダーの白背景 -->
+</footer>
+
+
+
+</body>

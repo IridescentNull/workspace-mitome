@@ -1,0 +1,26 @@
+package com.internousdev.shop.action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.shop.dao.AdministratorEnterDAO;
+import com.internousdev.shop.dto.AdministratorEnterDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class AdministratorEnterAction extends ActionSupport implements SessionAware{
+	private String administratorId;
+	private String administratorIdShadow;
+	private String administratorPassword;
+	public Map<String, Object> session;
+	private AdministratorEnterDAO dao = new AdministratorEnterDAO();
+	private AdministratorEnterDTO dto = new AdministratorEnterDTO();
+
+	public String execute(){
+		dto = dao.getDto(administratorId, administratorPassword);
+		if(dto.getLoginFlg()){
+			session.put("administratorIdShadow",dto.getAdministratorIdShadow());
+			return SUCCESS;
+		}
+	}
+}

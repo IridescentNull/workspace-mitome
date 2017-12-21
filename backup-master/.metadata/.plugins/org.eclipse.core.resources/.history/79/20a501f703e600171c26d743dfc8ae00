@@ -1,0 +1,22 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<jsp:include page="headerAdministrators.jsp"/>
+<body onload="setTimeout(function(){window.close();}, 1000)">
+	<% session.removeAttribute("loginUserIdShadow");%>
+	<script type='text/javascript' charset='utf-8'>
+		setTimeout(function(){
+			window.open('about:blank','_self').close();}, 10000);
+		setTimeout(function(){
+			window.close();}, 10000);
+	</script>
+	<div class="text-center">
+		<s:form>
+			<h3>You have about 10 seconds.</h3>
+			Your id<input type="password" name="administratorId">
+			Your Password<input type="password" name="administratorPassword">
+			<button class="btn-std">Enter</button>
+
+		</s:form>
+	</div>
+
+<jsp:include page="footer.jsp"/>

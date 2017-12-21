@@ -1,0 +1,40 @@
+package com.internousdev.shop.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import com.internousdev.shop.dto.AdministratorEnterDTO;
+import com.internousdev.shop.util.DBConnector;
+
+public class AdministratorEnterDAO {
+
+	private DBConnector dbConnector=new DBConnector();
+	private Connection connection=dbConnector.getConnection();
+	private AdministratorEnterDTO dto = new AdministratorEnterDTO();
+
+	public AdministratorEnterDTO getDto(String administratorId, String administratorPassword){
+
+		String sql="SELECT * FROM administrators_table where administrators_login_id=? AND administrators_login_password=?";
+
+		try{
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, administratorId);
+			preparedStatement.setString(2, administratorPassword);
+
+			ResultSet resultSet = preparedStatement.executeQuery();
+
+			if(resultSet.next()){
+				dto.setAdministratorId(resultSet.getString("administrators_login_id"));
+				dto.setAdministratorIdShadow(resultSet.getString("administrators_login_id"));
+				dto.setAdministratorPassword("administrators_login_password");
+
+
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return dto;
+
+	}
+}

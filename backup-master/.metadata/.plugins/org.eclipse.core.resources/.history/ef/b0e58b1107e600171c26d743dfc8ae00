@@ -1,0 +1,11 @@
+use orange;
+
+drop table if exists administrators_table;
+
+create table administrators_table(
+id int not null primary key auto_increment,
+administrators_login_id int
+administrators_user_name varchar(255),
+administrators_login_password varchar(255)
+);
+INSERT INTO administrators_table(administrators_login_id, administrators_user_name, administrators_login_password) VALUES("ノートBook", 100, 50);

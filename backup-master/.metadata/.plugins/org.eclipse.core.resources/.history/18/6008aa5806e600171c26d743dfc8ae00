@@ -1,0 +1,7 @@
+package com.internousdev.shop.dto;
+
+public class AdministratorEnterDTO {
+	private String administratorId;
+	private String administratorIdShadow;
+	private String administratorPassword;
+}

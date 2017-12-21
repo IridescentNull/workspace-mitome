@@ -1,0 +1,19 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<jsp:include page="headerAdministratorsScreen.jsp"/>
+	<table class="table table-striped">
+		<s:iterator value="dto">
+			<tr>
+				<td>
+					<b>Name: <s:property value="userName"/></b><br>
+					id: <s:property value="loginUserId"/><br>
+					Password: <s:property value="loginPassword"/><br>
+
+				</td>
+			</tr>
+
+		</s:iterator>
+
+	</table>
+
+<jsp:include page="footerAdministrators.jsp"/>

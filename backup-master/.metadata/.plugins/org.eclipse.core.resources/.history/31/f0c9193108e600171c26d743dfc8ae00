@@ -1,0 +1,17 @@
+package com.internousdev.shop.dao;
+
+import java.sql.Connection;
+
+import com.internousdev.shop.dto.AdministratorEnterDTO;
+import com.internousdev.shop.util.DBConnector;
+
+public class AdministratorEnterDAO {
+
+	private DBConnector dbConnector=new DBConnector();
+	private Connection connection=dbConnector.getConnection();
+	private AdministratorEnterDTO dto = new AdministratorEnterDTO();
+
+	public AdministratorEnterDTO getDto(String administratorId, String administratorPassword){
+
+	}
+}

@@ -13,7 +13,7 @@
 	</action>
 
 	<action name="LoginAction" class="com.internousdev.shop.action.LoginAction" method="execute">
-		<result name="success">welcome.jsp</result>
+		<result name="success">welcomeShadow.jsp</result>
 		<result name="error">login.jsp</result>
 	</action>
 
@@ -133,6 +133,20 @@
 		<result name="success">perchaseProgress.jsp</result>
 	</action>
 
+	<action name="AdministratorEnterAction" class="com.internousdev.shop.action.AdministratorEnterAction" method="execute">
+		<result name="success">administratorsScreen.jsp</result>
+		<result name="error">administrators.jsp</result>
+	</action>
+
+	<action name="GeneralUserAction" class="com.internousdev.shop.action.GeneralUserAction" method="execute">
+		<result name="success">generalUser.jsp</result>
+		<result name="error">login.jsp</result>
+	</action>
+
+	<action name="GeneralUserRemoveAction" class="com.internousdev.shop.action.GeneralUserRemoveAction" method="execute">
+		<result name="success">generalUser.jsp</result>
+		<result name="error">login.jsp</result>
+	</action>
 
 	</package>
 

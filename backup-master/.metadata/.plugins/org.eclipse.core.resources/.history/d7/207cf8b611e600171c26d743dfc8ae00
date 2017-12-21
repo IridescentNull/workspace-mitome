@@ -1,0 +1,15 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<jsp:include page="header.jsp"/>
+	<table class="table table-striped">
+		<s:iterator value="purchaseHistoryDTOList">
+			<tr>
+				<td>
+				<td>
+			</td>
+
+		</s:iterator>
+
+	</table>
+
+<jsp:include page="footerAdministrators.jsp"/>

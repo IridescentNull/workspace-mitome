@@ -372,6 +372,11 @@
 			var nowValue = document.getElementById('test').innerHTML;
 			var addValue = "<img src='orange.png' alt=''>";
 			document.getElementById('test').innerHTML = nowValue + addValue;}
+		function winOpen(){
+
+			window.open("administrators.jsp","sub");
+
+			}
 	</script>
 </head>
 <body>
@@ -383,12 +388,19 @@
 <s:form action="UserPageAction">
 
 			<%
-			String l = (String) session.getAttribute("loginUserIdShadow");
-			session.setAttribute("loginUserIdShadow", l);
+
 			String iD=(String)session.getAttribute("loginUserIdShadow");
 			if(iD != null){
-			out.println("You are logged in as: <strong>"+iD+"</strong><button class='pull-right btn-link'>Jump to User Page!</button>");}
-			else out.println("&nbsp");%>
+			out.println("You are logged in as: <strong>"+iD+"</strong><button class='pull-right btn-link'>Jump to User Page!</button>");
+			if(((String)session.getAttribute("loginUserIdShadow")).equals("Tachibana")){
+				/* out.println("<br><strong>You are a <i><u>ROOT USER.</u></i></strong>&nbsp;&nbsp;<a href='administrators.jsp'>Jump to <strong>ADMINISTRATORS SCREEN.</strong></a>"); */
+				out.println("<br><strong>You are a <i><u>ROOT USER.</u></i></strong>&nbsp;&nbsp;<a onClick='winOpen()'>Jump to <strong>ADMINISTRATORS SCREEN.</strong></a>");
+			}
+			}
+			else {
+				out.println("&nbsp");
+			}
+			%>
 
 
 

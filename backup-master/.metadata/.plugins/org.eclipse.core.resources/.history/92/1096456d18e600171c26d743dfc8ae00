@@ -1,0 +1,23 @@
+package com.internousdev.shop.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.internousdev.shop.dto.UserInfoDTO;
+import com.internousdev.shop.util.DBConnector;
+
+public class GeneralUserDAO {
+	private DBConnector dbConnector=new DBConnector();
+	private Connection connection=dbConnector.getConnection();
+	private UserInfoDTO dto = new UserInfoDTO();
+
+	public UserInfoDTO getUserInfo() throws SQLException{
+		String sql="SELCET * FROM login_user_transaction";
+
+		try{
+			PreparedStatement ps = connection.prepareStatement(sql);
+		}
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.internousdev.shop.dao;
+
+import java.sql.Connection;
+
+import com.internousdev.shop.dto.UserInfoDTO;
+import com.internousdev.shop.util.DBConnector;
+
+public class GeneralUserRemoveDAO {
+	private DBConnector dbConnector=new DBConnector();
+	private Connection connection=dbConnector.getConnection();
+	private UserInfoDTO userInfoDTO = new UserInfoDTO();
+
+	public void deleteUser(String loginUserId){
+
+	}
+
+}
