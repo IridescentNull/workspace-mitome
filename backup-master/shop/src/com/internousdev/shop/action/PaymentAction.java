@@ -32,6 +32,7 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	private int timeCapsuleCheck;
 	private int officeCheck;
 	private int pcOneDeliver;
+	private int pcTwoDeliver;
 	private int connectorOneDeliver;
 	private int connectorTwoDeliver;
 	private int driveDeliver;
@@ -48,7 +49,7 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	private String shippingUserZIP;
 	private String shippingUserCountry;
 	private String shippingUserPhone;
-	
+
 
 	public Map<String, Object> session;
 
@@ -70,6 +71,7 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 		timeCapsuleCheck = (int)session.get("timeCapsuleCheck");
 		officeCheck = (int)session.get("officeCheck");
 		pcOneDeliver = (int)session.get("pcOneDeliver");
+		setPcTwoDeliver((int)session.get("pcTwoDeliver"));
 		connectorOneDeliver = (int)session.get("connectorOneDeliver");
 		connectorTwoDeliver = (int)session.get("connectorTwoDeliver");
 		driveDeliver = (int)session.get("driveDeliver");
@@ -414,6 +416,14 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 
 	public void setShippingUserPhone(String shippingUserPhone) {
 		this.shippingUserPhone = shippingUserPhone;
+	}
+
+	public int getPcTwoDeliver() {
+		return pcTwoDeliver;
+	}
+
+	public void setPcTwoDeliver(int pcTwoDeliver) {
+		this.pcTwoDeliver = pcTwoDeliver;
 	}
 
 

@@ -33,6 +33,7 @@
 
 	<action name="DesktopAction" class="com.internousdev.shop.action.DesktopAction" method="execute">
 		<result name="success">desktop.jsp</result>
+		<result name="error">login.jsp</result>
 	</action>
 
 	<action name="UserPageAction" class="com.internousdev.shop.action.UserPageAction" method="execute">
@@ -118,6 +119,7 @@
 
 	<action name="PurchaseCompleteAction" class="com.internousdev.shop.action.PurchaseCompleteAction" method="execute">
 		<result name="success">purchaseComplete.jsp</result>
+		<result name="error">login.jsp</result>
 	</action>
 
 	<action name="PurchaseHistoryAction" class="com.internousdev.shop.action.PurchaseHistoryAction" method="execute">
@@ -127,10 +129,12 @@
 
 	<action name="LaptopAction" class="com.internousdev.shop.action.LaptopAction" method="execute">
 		<result name="success">laptop.jsp</result>
+		<result name="error">login.jsp</result>
 	</action>
 
 	<action name="AccessoriesAction" class="com.internousdev.shop.action.AccessoriesAction" method="execute">
 		<result name="success">perchaseProgress.jsp</result>
+		<result name="error">login.jsp</result>
 	</action>
 
 	<action name="AdministratorEnterAction" class="com.internousdev.shop.action.AdministratorEnterAction" method="execute">
@@ -145,6 +149,26 @@
 
 	<action name="GeneralUserRemoveAction" class="com.internousdev.shop.action.GeneralUserRemoveAction" method="execute">
 		<result name="success">generalUser.jsp</result>
+		<result name="error">login.jsp</result>
+	</action>
+
+	<action name="GeneralUserRemoveAction" class="com.internousdev.shop.action.GeneralUserRemoveAction" method="execute">
+		<result name="success">generalUser.jsp</result>
+		<result name="error">login.jsp</result>
+	</action>
+
+	<action name="BuyHistoryAction" class="com.internousdev.shop.action.BuyHistoryAction" method="execute">
+		<result name="success">sell.jsp</result>
+		<result name="error">login.jsp</result>
+	</action>
+
+	<action name="BuyHistoryRemoveAction" class="com.internousdev.shop.action.BuyHistoryRemoveAction" method="execute">
+		<result name="success">sell.jsp</result>
+		<result name="error">login.jsp</result>
+	</action>
+
+	<action name="BillAction" class="com.internousdev.shop.action.BillAction" method="execute">
+		<result name="success">bill.jsp</result>
 		<result name="error">login.jsp</result>
 	</action>
 

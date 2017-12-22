@@ -1,0 +1,18 @@
+package com.internousdev.shop.action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.shop.dao.BuyHistoryRemoveDAO;
+import com.internousdev.shop.dto.BuyHistoryDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class BuyHistoryRemoveAction extends ActionSupport implements SessionAware{
+	public Map<String, Object> session;
+	private int id;
+	private BuyHistoryRemoveDAO buyHistoryRemoveDAO = new BuyHistoryRemoveDAO();
+	private BuyHistoryDTO buyHistoryDTO =
+
+
+}

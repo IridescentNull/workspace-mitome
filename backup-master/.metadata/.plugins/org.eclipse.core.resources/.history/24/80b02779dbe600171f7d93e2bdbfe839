@@ -1,0 +1,12 @@
+package com.internousdev.shop.dao;
+
+import java.sql.Connection;
+
+import com.internousdev.shop.util.DBConnector;
+
+public class BillDAO {
+
+	private DBConnector dbConnector=new DBConnector();
+	private Connection connection=dbConnector.getConnection();
+
+}

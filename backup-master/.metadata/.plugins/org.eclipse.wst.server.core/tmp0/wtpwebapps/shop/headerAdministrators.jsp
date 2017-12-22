@@ -369,7 +369,7 @@
 </style>
 <script  type="text/javascript"  charset="utf-8">
 		function Orange(){
-			window.location.href = 'login.jsp';}
+			window.close();}
 	</script>
 </head>
 <body>

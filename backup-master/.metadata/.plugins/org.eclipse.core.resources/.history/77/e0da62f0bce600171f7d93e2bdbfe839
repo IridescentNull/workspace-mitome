@@ -1,0 +1,30 @@
+package com.internousdev.shop.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import com.internousdev.shop.dto.BuyHistoryDTO;
+import com.internousdev.shop.util.DBConnector;
+
+public class BuyHistryDAO {
+	private DBConnector dbConnector=new DBConnector();
+	private Connection connection=dbConnector.getConnection();
+
+	public ArrayList<BuyHistoryDTO> getBuyHistory() throws SQLException{
+		ArrayList<BuyHistoryDTO> buyHistoryDTO = new ArrayList<BuyHistoryDTO>();
+		String sql="SELECT * FROM buy_table";
+
+		try{
+			PreparedStatement ps = connection.prepareStatement(sql);
+			ResultSet resultSet = ps.executeQuery();
+
+			while(resultSet.next()){
+
+			}
+		}
+	}
+
+}

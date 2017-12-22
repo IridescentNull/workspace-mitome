@@ -56,6 +56,10 @@ public class PerchaseProgressAction extends ActionSupport implements SessionAwar
 		officePriceArray[2] = 69.9500f;
 		officePriceArray[3] = 149.9500f;
 		officePriceArray[4] = 229.9500f;
+		if(pcType==2 || storageForm == 0){
+			storageForm = 1;
+			session.put("storageForm", storageForm);
+		}
 		totalPrice2 = totalPrice1 + carePriceArray[careCheck] + connector1PriceArray[connector1Check] + connector2PriceArray[connector2Check] + drivePriceArray[driveCheck] + storagePriceArray[storageCheck] + airportPriceArray[airportCheck] + timeCapsulePriceArray[timeCapsuleCheck] + officePriceArray[officeCheck];
 		session.put("careCheck", careCheck);
 		session.put("connector1Check", connector1Check);

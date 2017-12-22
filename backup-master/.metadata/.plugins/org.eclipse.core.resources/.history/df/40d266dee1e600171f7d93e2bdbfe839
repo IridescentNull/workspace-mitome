@@ -1,0 +1,41 @@
+package com.internousdev.shop.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import com.internousdev.shop.dto.PayInfoDTO;
+import com.internousdev.shop.util.DBConnector;
+
+public class BillDAO {
+	private DBConnector dbConnector=new DBConnector();
+	private Connection connection=dbConnector.getConnection();
+
+	public ArrayList<PayInfoDTO> getPayInfo() throws SQLException{
+		ArrayList<PayInfoDTO> payInfoDTOList = new ArrayList<PayInfoDTO>();
+		String sql = "SELECT * FROM pay_table";
+
+		try{
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+			ResultSet resultSet = preparedStatement.executeQuery();
+
+			while(resultSet.next()){
+				PayInfoDTO payInfoDTO = new PayInfoDTO();
+				payInfoDTO.setId(resultSet.getInt("id"));
+
+				payInfoDTO.setShippingUserName(resultSet.getString("shipping_user_name"));
+				payInfoDTO.setShippingCompanyName(resultSet.getString("shipping_company_name"));
+				payInfoDTO.setShippingAddress1(resultSet.getString("shipping_address1"));
+				payInfoDTO.setShippingAddress2(resultSet.getString("shipping_address2"));
+				payInfoDTO.setShippingUserCity(resultSet.getString("shipping_user_city"));
+				payInfoDTO.setShippingUserState(resultSet.getString("shipping_user_state"));
+
+				payInfoDTO.setPrice(resultSet.getFloat("total_price"));
+			}
+
+		}
+	}
+
+}

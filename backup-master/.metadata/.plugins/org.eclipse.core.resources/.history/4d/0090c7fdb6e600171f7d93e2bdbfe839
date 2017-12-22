@@ -1,0 +1,26 @@
+package com.internousdev.shop.action;
+
+import java.util.Map;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class LaptopAction extends ActionSupport{
+	private int pcType;
+	public Map<String, Object> session;
+	public String execute(){
+		if (!session.containsKey("loginUserIdShadow")){
+			return ERROR;
+		}
+		pcType = 2;
+		return SUCCESS;
+	}
+
+	public int getPcType() {
+		return pcType;
+	}
+
+	public void setPcType(int pcType) {
+		this.pcType = pcType;
+	}
+
+}

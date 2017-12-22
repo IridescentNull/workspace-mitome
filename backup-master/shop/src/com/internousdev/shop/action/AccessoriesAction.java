@@ -17,6 +17,9 @@ public class AccessoriesAction extends ActionSupport implements SessionAware{
 	public Map<String, Object> session;
 
 	public String execute(){
+		if (!session.containsKey("loginUserIdShadow")){
+			return ERROR;
+		}
 		totalPrice1 = 0;
 		session.put("memoryForm", memoryForm);
 		session.put("storageForm", storageForm);

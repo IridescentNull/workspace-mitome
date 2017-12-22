@@ -78,6 +78,14 @@
     }
 	}
 
+		@media(min-width:768px){
+	.buy-history-button{
+    position: absolute;
+	bottom: -80px  !important;
+	right: 20px  !important;
+    }
+	}
+
 
 	.overlay-btn{
 		display: block;
@@ -378,7 +386,7 @@
 </style>
 <script  type="text/javascript"  charset="utf-8">
 		function Orange(){
-			window.location.href = 'login.jsp';}
+			window.close();}
 	</script>
 </head>
 <body>

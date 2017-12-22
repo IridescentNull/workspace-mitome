@@ -59,6 +59,7 @@ public class BagAction extends ActionSupport implements SessionAware{
 		if(pcType==0){
 			totalPrice1 = 0f;
 		}
+
 		totalPrice2 = totalPrice1 + carePriceArray[careCheck] + connector1PriceArray[connector1Check] + connector2PriceArray[connector2Check] + drivePriceArray[driveCheck] + storagePriceArray[storageCheck] + airportPriceArray[airportCheck] + timeCapsulePriceArray[timeCapsuleCheck] + officePriceArray[officeCheck];
 		session.put("memoryForm", memoryForm);
 		session.put("storageForm", storageForm);

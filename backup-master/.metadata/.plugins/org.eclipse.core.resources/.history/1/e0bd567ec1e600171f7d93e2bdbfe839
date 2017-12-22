@@ -1,0 +1,27 @@
+package com.internousdev.shop.action;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.shop.dao.BuyHistoryDAO;
+import com.internousdev.shop.dto.BuyHistoryDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class BuyHistoryAction extends ActionSupport implements SessionAware {
+	public Map<String, Object> session;
+	private BuyHistoryDAO buyHistoryDAO = new BuyHistoryDAO();
+	private List<BuyHistoryDTO> buyHistoryDTOList = new ArrayList<BuyHistoryDTO>();
+
+	public String execute() throws SQLException{
+		if (!session.containsKey("administratorIdShadow")){
+			return ERROR;
+		}
+		buyHistoryDTOList = buyHistoryDAO.getBuyHistory();
+		return SUCCESS;
+	}
+
+}

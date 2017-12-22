@@ -24,7 +24,7 @@
 						<div class="col-sm-1" >
 							<s:form action="GeneralUserRemoveAction">
 								<input type="hidden" name="loginUserId" value="<s:property value='loginUserId'/>">
-								<button class="btn-std history-button" >delete</button>
+								<button class="btn-default history-button" >delete</button>
 							</s:form>
 						</div>
 					</div>

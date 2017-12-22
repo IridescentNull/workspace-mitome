@@ -1,0 +1,96 @@
+package com.internousdev.shop.action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class AccessoriesAction extends ActionSupport implements SessionAware{
+	private int pcType;
+	private int memoryForm;
+	private int storageForm;
+	private int mouseForm;
+	private int fruitForm;
+	private int flowerForm;
+	private float totalPrice1;
+	public Map<String, Object> session;
+
+	public String execute(){
+		totalPrice1 = 0;
+		session.put("memoryForm", memoryForm);
+		session.put("storageForm", storageForm);
+		session.put("mouseForm", mouseForm);
+		session.put("fruitForm", fruitForm);
+		session.put("flowerForm", flowerForm);
+		session.put("pcType", pcType);
+		session.put("totalPrice1", totalPrice1);
+		return SUCCESS;
+	}
+
+	public int getPcType() {
+		pcType = 0;
+		return pcType;
+	}
+
+	public void setPcType(int pcType) {
+		this.pcType = pcType;
+	}
+
+	public int getMemoryForm() {
+		return memoryForm;
+	}
+
+	public void setMemoryForm(int memoryForm) {
+		this.memoryForm = memoryForm;
+	}
+
+	public int getStorageForm() {
+		return storageForm;
+	}
+
+	public void setStorageForm(int storageForm) {
+		this.storageForm = storageForm;
+	}
+
+	public int getMouseForm() {
+		return mouseForm;
+	}
+
+	public void setMouseForm(int mouseForm) {
+		this.mouseForm = mouseForm;
+	}
+
+	public int getFruitForm() {
+		return fruitForm;
+	}
+
+	public void setFruitForm(int fruitForm) {
+		this.fruitForm = fruitForm;
+	}
+
+	public int getFlowerForm() {
+		return flowerForm;
+	}
+
+	public void setFlowerForm(int flowerForm) {
+		this.flowerForm = flowerForm;
+	}
+
+	public float getTotalPrice1() {
+		return totalPrice1;
+	}
+
+	public void setTotalPrice1(float totalPrice1) {
+		this.totalPrice1 = totalPrice1;
+	}
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+
+}

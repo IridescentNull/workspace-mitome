@@ -1,0 +1,16 @@
+package com.internousdev.shop.dao;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import com.internousdev.shop.util.DBConnector;
+
+public class BuyHistoryRemoveDAO {
+	private DBConnector dbConnector=new DBConnector();
+	private Connection connection=dbConnector.getConnection();
+
+	public void deleteBuyHistory(String id) throws SQLException{
+
+	}
+
+}

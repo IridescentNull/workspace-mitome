@@ -1198,9 +1198,9 @@
 							<br>
 							<div class=inliner-right>
 							<input type="hidden" name="shippingUserName" value="<s:property value='shippingUserName'/>">
-							<input type="hidden" name="shippingCompanyName"  class="shippingCompanyName">
+							<input type="hidden" name="shippingCompanyName"  value="<s:property value='shippingCompanyName'/>">
 							<input type="hidden" name="shippingAddress1"  value="<s:property value='shippingAddress1'/>" >
-							<input type="hidden" name="shippingAddress2  value="<s:property value='shippingAddress2'/>" >
+							<input type="hidden" name="shippingAddress2"  value="<s:property value='shippingAddress2'/>" >
 							<input type="hidden" name="shippingUserCity"  value="<s:property value='shippingUserCity'/>" >
 							<input type="hidden" name="shippingUserState"  value="<s:property value='shippingUserState'/>">
 							<input type="hidden" name="shippingUserZIP"  value="<s:property value='shippingUserZIP'/>">
@@ -1222,6 +1222,16 @@
 				<div class="inliner"><h3>&#9314; Payment</h3></div>
 				<div class="inliner-right">
 					<s:form action="PaymentEditAction">
+							<input type="hidden" name="shippingUserName" value="<s:property value='shippingUserName'/>">
+							<input type="hidden" name="shippingCompanyName"  value="<s:property value='shippingCompanyName'/>">
+							<input type="hidden" name="shippingAddress1"  value="<s:property value='shippingAddress1'/>" >
+							<input type="hidden" name="shippingAddress2"  value="<s:property value='shippingAddress2'/>" >
+							<input type="hidden" name="shippingUserCity"  value="<s:property value='shippingUserCity'/>" >
+							<input type="hidden" name="shippingUserState"  value="<s:property value='shippingUserState'/>">
+							<input type="hidden" name="shippingUserZIP"  value="<s:property value='shippingUserZIP'/>">
+							<input type="hidden" name="shippingUserCountry"  value="<s:property value='shippingUserCountry'/>" >
+							<input type="hidden" name="shippingUserPhone"  value="<s:property value='shippingUserPhone'/>">
+							<input type="hidden" name="tax" value="<%=session.getAttribute("tax")%>">
 						<input type="hidden" name="continueFlug" value= 2>
 						<input type="hidden" name="freeShipFlug" value="<s:property value='freeShipFlug'/>">
 						<button class="btn-default btn-lg">Edit</button>
@@ -2099,9 +2109,9 @@
 				<div class="inliner-right">
 					<s:form action="PurchaseCompleteAction">
 							<input type="hidden" name="shippingUserName" value="<s:property value='shippingUserName'/>">
-							<input type="hidden" name="shippingCompanyName"  class="shippingCompanyName">
+							<input type="hidden" name="shippingCompanyName"  value="<s:property value='shippingCompanyName'/>">
 							<input type="hidden" name="shippingAddress1"  value="<s:property value='shippingAddress1'/>" >
-							<input type="hidden" name="shippingAddress2  value="<s:property value='shippingAddress2'/>" >
+							<input type="hidden" name="shippingAddress2"  value="<s:property value='shippingAddress2'/>" >
 							<input type="hidden" name="shippingUserCity"  value="<s:property value='shippingUserCity'/>" >
 							<input type="hidden" name="shippingUserState"  value="<s:property value='shippingUserState'/>">
 							<input type="hidden" name="shippingUserZIP"  value="<s:property value='shippingUserZIP'/>">
@@ -2119,8 +2129,7 @@
 					<br>
 				</div>
 			</s:if>
-
 			<p class="box"/>
-		</div>
+		</div><s:property value='shippingUserName'/>
 	</div>
 <jsp:include page="footer.jsp"/>

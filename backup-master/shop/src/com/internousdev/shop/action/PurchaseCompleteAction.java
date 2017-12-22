@@ -53,13 +53,16 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 	private PurchaseCompleteDAO purchaseCompleteDAO = new PurchaseCompleteDAO();
 	public Map<String, Object> session;
 	public int goodsTypeArray[] = new int[11];//これいらんかも
-	// Cureが3、connectorが4,5,driveが6、外部storageが7,airportが8、timeカプセルが9、オフィスが10
+	// Careが3、connectorが4,5,driveが6、外部storageが7,airportが8、timeカプセルが9、オフィスが10
 	float goodsPriceArray[][];
 
 
 
 
 	public String execute() throws SQLException{
+		if (!session.containsKey("loginUserIdShadow")){
+			return ERROR;
+		}
 		int goodsTypeArray[] ={0,0,0,(int)session.get("careCheck"),(int)session.get("connector1Check"),(int)session.get("connector2Check"),(int)session.get("driveCheck"),(int)session.get("storageCheck"),(int)session.get("airportCheck"),(int)session.get("timeCapsuleCheck"),(int)session.get("officeCheck")};
 		int goodsDeliverArray[] ={0,0,0,0,(int)session.get("connectorOneDeliver"),(int)session.get("connectorTwoDeliver"),(int)session.get("driveDeliver"),(int)session.get("storageDeliver"),(int)session.get("airportDeliver"),(int)session.get("timeCapsuleDeliver"),(int)session.get("officeDeliver")};
 		goodsPriceArray = new float[12][5];

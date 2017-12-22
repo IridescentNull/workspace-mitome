@@ -9,7 +9,6 @@ import com.internousdev.shop.util.DBConnector;
 public class GeneralUserRemoveDAO {
 	private DBConnector dbConnector=new DBConnector();
 	private Connection connection=dbConnector.getConnection();
-/*	private UserInfoDTO userInfoDTO = new UserInfoDTO();*/
 
 	public void deleteUser(String loginUserId) throws SQLException{
 		String sql="DELETE FROM login_user_transaction where login_id=?";
