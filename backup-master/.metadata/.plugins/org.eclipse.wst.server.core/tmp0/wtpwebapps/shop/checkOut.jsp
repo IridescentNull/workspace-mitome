@@ -31,7 +31,7 @@
 	var month=date.getMonth();
 	var months= new Array("Jan","Feb","Mar","Apr","May","Jun","Jly", "Aug", "Sep", "Oct", "Nov", "Dec");
 	var day=date.getDate();
-	var twoAfterDate = new Date(date.getTime() + 2*24*60*60*1000);//ミリ秒をがんばって二日に
+	var twoAfterDate = new Date(date.getTime() + 2*24*60*60*1000);//ミリ秒をがんばって二日にしてから加算
 	var twoAfterMonth = twoAfterDate.getMonth();
 	var twoAfterWeek = twoAfterDate.getDay();
 	var twoAfterDay = twoAfterDate.getDate();
@@ -246,9 +246,9 @@
 									<li>
 										<s:if test='storageForm == 0'>1TB Cereal Food ATA Drive</s:if>
 										<s:if test='storageForm == 1'>2TB Cereal Food ATA Drive</s:if>
-										<s:if test='storageForm == 2'>256GB SSD</s:if>
-										<s:if test='storageForm == 3'>512GB SSD</s:if>
-										<s:if test='storageForm == 4'>1TB SSD</s:if>
+										<s:if test='storageForm == 2'>256GB SSD storage</s:if>
+										<s:if test='storageForm == 3'>512GB SSD storage</s:if>
+										<s:if test='storageForm == 4'>1TB SSD storage</s:if>
 									</li>
 									<div style="line-height: 0.5;"><br></div>
 									<li>
@@ -385,9 +385,9 @@
 									<li>
 										<s:if test='storageForm == 0'>1TB Cereal Food ATA Drive</s:if>
 										<s:if test='storageForm == 1'>2TB Cereal Food ATA Drive</s:if>
-										<s:if test='storageForm == 2'>256GB SSD</s:if>
-										<s:if test='storageForm == 3'>512GB SSD</s:if>
-										<s:if test='storageForm == 4'>1TB SSD</s:if>
+										<s:if test='storageForm == 2'>256GB SSD storage</s:if>
+										<s:if test='storageForm == 3'>512GB SSD storage</s:if>
+										<s:if test='storageForm == 4'>1TB SSD storage</s:if>
 									</li>
 									<div style="line-height: 0.5;"><br></div>
 									<li>
@@ -1134,7 +1134,7 @@
 			</s:if>
 			<s:if test="continueFlug == 2">
 				<p class="box"/>
-				<h3>&#9314; Payment</h3>
+				<h3>&#9314; Payment<strong><font color="red">&nbsp;&nbsp;&nbsp;&nbsp;<s:property value="errorMessage"/></font></strong></h3>
 				<p class="box"/>
 				<div class="row">
 					<div class="col-xs-8 col-xs-offset-4">
@@ -1185,7 +1185,7 @@
 									<td>&nbsp;</td><td>&nbsp;</td>
 								</tr>
 								<tr>
-									<td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Security Code &nbsp;&nbsp;&nbsp;&nbsp;</td><td> <input class="form-control" name="cardCode" ></td><td><small style="color: gray;">
+									<td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Security Code &nbsp;&nbsp;&nbsp;&nbsp;</td><td> <input type="password" class="form-control" name="cardCode" ></td><td><small style="color: gray;">
 						<span id="securityCodeQuestion">
 							<img src="hatena.png">
 							<span class="panel panel-default mini-overlay">
@@ -2130,6 +2130,6 @@
 				</div>
 			</s:if>
 			<p class="box"/>
-		</div><s:property value='shippingUserName'/>
+		</div>
 	</div>
 <jsp:include page="footer.jsp"/>

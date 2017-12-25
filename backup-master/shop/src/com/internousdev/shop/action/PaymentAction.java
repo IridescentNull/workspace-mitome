@@ -49,12 +49,19 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 	private String shippingUserZIP;
 	private String shippingUserCountry;
 	private String shippingUserPhone;
+	private String errorMessage;
 
 
 	public Map<String, Object> session;
 
 
 	public String execute(){
+		if(cardType == 0 || cardNumber.equals("")  || nameOnCard.equals("")   || cardExpiryDate.equals("")   || cardCode == 0 ){
+			continueFlug = 2;
+			errorMessage = "Please fill out all columns";
+			System.out.println(errorMessage);
+			return ERROR;
+		}
 		memoryForm = (int)session.get("memoryForm");
 		storageForm = (int)session.get("storageForm");
 		mouseForm = (int)session.get("mouseForm");
@@ -71,7 +78,7 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 		timeCapsuleCheck = (int)session.get("timeCapsuleCheck");
 		officeCheck = (int)session.get("officeCheck");
 		pcOneDeliver = (int)session.get("pcOneDeliver");
-		setPcTwoDeliver((int)session.get("pcTwoDeliver"));
+		pcTwoDeliver = ((int)session.get("pcTwoDeliver"));
 		connectorOneDeliver = (int)session.get("connectorOneDeliver");
 		connectorTwoDeliver = (int)session.get("connectorTwoDeliver");
 		driveDeliver = (int)session.get("driveDeliver");
@@ -424,6 +431,14 @@ public class PaymentAction extends ActionSupport implements SessionAware{
 
 	public void setPcTwoDeliver(int pcTwoDeliver) {
 		this.pcTwoDeliver = pcTwoDeliver;
+	}
+
+	public String getErrorMessage() {
+		return errorMessage;
+	}
+
+	public void setErrorMessage(String errorMessage) {
+		this.errorMessage = errorMessage;
 	}
 
 

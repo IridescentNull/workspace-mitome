@@ -79,6 +79,7 @@
 
 	<action name="PerchaseProgressAction" class="com.internousdev.shop.action.PerchaseProgressAction" method="execute">
 		<result name="success">bag.jsp</result>
+		<result name="error">perchaseProgress.jsp</result>
 	</action>
 
 	<action name="DesktopRemoveAction" class="com.internousdev.shop.action.DesktopRemoveAction" method="execute">
@@ -91,6 +92,7 @@
 
 	<action name="BagAction" class="com.internousdev.shop.action.BagAction" method="execute">
 		<result name="success">checkOut.jsp</result>
+		<result name="error">bag.jsp</result>
 	</action>
 
 	<action name="CheckOutContinueAction" class="com.internousdev.shop.action.CheckOutContinueAction" method="execute">
@@ -111,6 +113,7 @@
 
 	<action name="PaymentAction" class="com.internousdev.shop.action.PaymentAction" method="execute">
 		<result name="success">checkOut.jsp</result>
+		<result name="error">checkOut.jsp</result>
 	</action>
 
 	<action name="PaymentEditAction" class="com.internousdev.shop.action.PaymentEditAction" method="execute">
@@ -171,6 +174,12 @@
 		<result name="success">bill.jsp</result>
 		<result name="error">login.jsp</result>
 	</action>
+
+	<action name="BuyHistorySelectAction" class="com.internousdev.shop.action.BuyHistorySelectAction" method="execute">
+		<result name="success">sell.jsp</result>
+		<result name="error">login.jsp</result>
+	</action>
+
 
 	</package>
 

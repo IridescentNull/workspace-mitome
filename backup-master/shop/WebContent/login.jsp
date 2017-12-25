@@ -27,6 +27,7 @@
 	<div class="text-center">
 		<br/>
 		<br/>
+		<strong class="text-center"><font color="red"><h3 class="text-center">${errorMessage}</h3></font></strong>
 		<br/>
 		<br/>
 		<small>Don't you have an account?</small><br/>

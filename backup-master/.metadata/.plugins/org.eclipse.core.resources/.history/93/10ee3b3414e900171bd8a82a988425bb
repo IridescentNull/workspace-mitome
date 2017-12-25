@@ -1,0 +1,19 @@
+package com.internousdev.shop.dao;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import com.internousdev.shop.dto.BuyHistoryDTO;
+import com.internousdev.shop.util.DBConnector;
+
+public class BuyHistorySelectDAO {
+	private DBConnector dbConnector=new DBConnector();
+	private Connection connection=dbConnector.getConnection();
+
+	public ArrayList<BuyHistoryDTO> getBuyHistory() throws SQLException{
+		ArrayList<BuyHistoryDTO> buyHistoryDTOList = new ArrayList<BuyHistoryDTO>();
+		String sql="SELECT * FROM buy_table";
+
+	}
+}

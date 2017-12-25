@@ -59,7 +59,7 @@
 		</s:form></div>
 
 		<s:form class="col-sm-6" cssClass="form-horizontal" action="WelcomeAction">
-			<div class="text-center"><button class="btn-lg btn-primary">Perchase</button></div>
+			<div class="text-center"><button class="btn-lg btn-primary">Purchase</button></div>
 		</s:form>
 		</div>
 	<s:form action="UserInfoReviseAction">

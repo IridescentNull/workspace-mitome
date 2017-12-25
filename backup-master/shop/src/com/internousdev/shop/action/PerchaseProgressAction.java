@@ -35,6 +35,9 @@ public class PerchaseProgressAction extends ActionSupport implements SessionAwar
 	public Map<String, Object> session;
 
 	public String execute(){
+		if(pcType ==0 && careCheck ==0 && connector1Check == 0 && connector2Check == 0 && driveCheck == 0 && storageCheck == 0 && airportCheck == 0 && timeCapsuleCheck == 0&& officeCheck == 0){
+			return ERROR;
+		}
 		carePriceArray[0] = 0;
 		carePriceArray[1] = 169.00f;
 		connector1PriceArray[0] = 0;
@@ -56,7 +59,7 @@ public class PerchaseProgressAction extends ActionSupport implements SessionAwar
 		officePriceArray[2] = 69.9500f;
 		officePriceArray[3] = 149.9500f;
 		officePriceArray[4] = 229.9500f;
-		if(pcType==2 || storageForm == 0){
+		if(pcType==2 && storageForm == 0){
 			storageForm = 1;
 			session.put("storageForm", storageForm);
 		}
@@ -73,23 +76,6 @@ public class PerchaseProgressAction extends ActionSupport implements SessionAwar
 		session.put("totalPrice2", totalPrice2);
 		session.put("pcType", pcType);
 		session.put("tax", tax);
-		System.out.println(careCheck);
-		System.out.println(connector1Check);
-		System.out.println(connector2Check);
-		System.out.println(driveCheck);
-		System.out.println(storageCheck);
-		System.out.println(airportCheck);
-		System.out.println(timeCapsuleCheck);
-		System.out.println(officeCheck);
-		System.out.println(pcType);
-		System.out.println(memoryForm);
-		System.out.println(storageForm);
-		System.out.println(mouseForm);
-		System.out.println(fruitForm);
-		System.out.println(flowerForm);
-		System.out.println(totalPrice1);
-		System.out.println(getSession());
-		System.out.println(totalPrice2);
 		return SUCCESS;
 	}
 

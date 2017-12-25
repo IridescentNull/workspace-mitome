@@ -1,6 +1,19 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <jsp:include page="headerAdministratorsScreen.jsp"/>
+	<s:form class="text-right" action="BuyHistorySelectAction">
+	<div class="row">
+		<div class="col-xs-4 col-xs-offset-6">
+			<input type="text" placeholder="User ID" class="form-control" name="targetId" style="width: 200px;">
+		</div>
+		<div class="col-xs-1">
+			<button class="btn-default btn" >Select</button>
+		</div>
+		<div class="col-xs-1">
+		</div>
+	</div>
+	</s:form>
+	<br>
 	<table class="table table-striped">
 		<s:iterator value="buyHistoryDTOList">
 			<tr>

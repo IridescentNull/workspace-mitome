@@ -55,12 +55,14 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 	public int goodsTypeArray[] = new int[11];//これいらんかも
 	// Careが3、connectorが4,5,driveが6、外部storageが7,airportが8、timeカプセルが9、オフィスが10
 	float goodsPriceArray[][];
+	private String errorMessage;
 
 
 
 
 	public String execute() throws SQLException{
 		if (!session.containsKey("loginUserIdShadow")){
+			errorMessage = "Please manipulate in the login state.";
 			return ERROR;
 		}
 		int goodsTypeArray[] ={0,0,0,(int)session.get("careCheck"),(int)session.get("connector1Check"),(int)session.get("connector2Check"),(int)session.get("driveCheck"),(int)session.get("storageCheck"),(int)session.get("airportCheck"),(int)session.get("timeCapsuleCheck"),(int)session.get("officeCheck")};
@@ -362,5 +364,13 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 
 	public void setFreeShipFlug(int freeShipFlug) {
 		this.freeShipFlug = freeShipFlug;
+	}
+
+	public String getErrorMessage() {
+		return errorMessage;
+	}
+
+	public void setErrorMessage(String errorMessage) {
+		this.errorMessage = errorMessage;
 	}
 }

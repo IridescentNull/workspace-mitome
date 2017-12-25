@@ -32,7 +32,7 @@
 							<input type="hidden" name="flowerForm" value="<%=session.getAttribute("flowerForm") %>">
 							<input type="hidden" name="pcType" value="0">
 							<input type="hidden" name="totalPrice1" value=0>
-							<input type="hidden" name="careCheck" value="<%=session.getAttribute("careCheck") %>">
+							<input type="hidden" name="careCheck" value=0>
 							<input type="hidden" name="connector1Check" value="<%=session.getAttribute("connector1Check") %>">
 							<input type="hidden" name="connector2Check" value="<%=session.getAttribute("connector2Check") %>">
 							<input type="hidden" name="driveCheck" value="<%=session.getAttribute("driveCheck") %>">

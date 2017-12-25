@@ -45,6 +45,11 @@ public class PerchaseAction extends ActionSupport implements SessionAware{
 		}
 		if(pcType == 2){
 			totalPrice1 = 1299;
+			storagePriceArray[0] = 0;
+			storagePriceArray[1] = 0;
+			storagePriceArray[2] = 200;
+			storagePriceArray[3] = 400;
+			storagePriceArray[4] = 800;
 		}
 		totalPrice1 = totalPrice1 + memoryPriceArray[memoryForm] + storagePriceArray[storageForm] +  mousePriceArray[mouseForm] + fruitPriceArray[fruitForm] +  flowerPriceArray[flowerForm];
 		session.put("memoryForm", memoryForm);
