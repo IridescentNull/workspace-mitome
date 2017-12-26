@@ -1,6 +1,9 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <jsp:include page="headerAdministratorsScreen.jsp"/>
+<a class="btn-default btn"  onClick="Javascript:location.href = 'administratorsScreen.jsp'">back</a>
+	<br>
+	&nbsp;<br>
 	<table class="table table-striped">
 		<s:iterator value="payInfoDTOList">
 			<tr>
@@ -41,5 +44,5 @@
 			</tr>
 		</s:iterator>
 	</table>
-
+<a class="btn-default btn"  onClick="Javascript:location.href = 'administratorsScreen.jsp'">back</a>
 <jsp:include page="footerAdministrators.jsp"/>

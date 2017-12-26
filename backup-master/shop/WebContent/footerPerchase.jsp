@@ -26,7 +26,6 @@
 				<h3 style="color: gray;">$ <span id="priceTelling"><script>var i= price; document.write(i.toFixed(2) );
 				</script></span></h3><div style='line-height: 1;'><br></div>
 				<s:form action="PerchaseAction" class="text-center">
-
 					<input type="hidden" name="memoryForm" id="memoryForm" value="0">
 					<input type="hidden" name="storageForm" id="storageForm" value="0">
 					<input type="hidden" name="mouseForm" id="mouseForm" value="0">

@@ -1,7 +1,7 @@
 </div>
 </div>
 <footer class="text-center">
-
+		<br>
 		<p>Copyright &#x00A9; 2017 Orange Inc. All rights reserved.</p>
 
 </footer>

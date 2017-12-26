@@ -6,85 +6,75 @@
 			<table class="table table-striped text-center">
 				<tr>
 					<td>
-						<label class="col-sm-3"><h4>Login&nbsp;Id:</h4></label>
-					</td>
-					<td class="col-sm-9">
-						<h4><s:property value="loginUserId" escape="false"/></h4>
+						<div class="col-sm-3"><h4>Login&nbsp;Id</h4></div>
+						<div class="col-sm-9"><h4><s:property value="loginUserId" escape="false"/></h4></div>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<label class="col-sm-3"><h4>Password:</h4></label>
-					</td>
-					<td class="col-sm-9">
+						<div class="col-sm-3"><h4>Password</h4></div>
+						<div class="col-sm-9">
 						<h4><script type="text/javascript">
 							var p=<s:property value="passwordLength"/>;
 							for(var i=0; i<p; i++){document.write("*");}
 						</script></h4>
+						</div>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<label class="col-sm-3"><h4>Full&nbsp;Name:</h4></label>
-					</td>
-					<td class="col-sm-9">
-						<h4><s:property value="userName" escape="false"/></h4>
+						<div class="col-sm-3"><h4>Full&nbsp;Name</h4></div>
+						<div class="col-sm-9"><h4><s:property value="userName" escape="false"/></h4></div>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<label class="col-sm-3"><h4>Address(Line1):</h4></label>
-					</td>
-					<td class="col-sm-9">
+						<div class="col-sm-3"><h4>Address(Line1)</h4></div>
+					<div class="col-sm-9">
 						<h4><s:property value="userAddress1" escape="false"/></h4>
+					</div>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<label class="col-sm-3"><h4>Address(Line2):</h4></label>
-					</td>
-					<td class="col-sm-9">
-						<h4><s:property value="userAddress2" escape="false"/></h4>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label class="col-sm-3"><h4>City:</h4></label>
-					</td>
-					<td class="col-sm-9">
-						<h4><s:property value="userCity" escape="false"/></h4>
+						<div class="col-sm-3"><h4>Address(Line2)</h4></div>
+					<div class="col-sm-9">
+						<h4><s:property value="userAddress2" escape="false"/></h4></div>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<label class="col-sm-3"><h4>State:</h4></label>
-					</td>
-					<td class="col-sm-9">
-						<h4><s:property value="userState" escape="false"/></h4>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label class="col-sm-3"><h4>ZIP&nbsp;Code:</h4></label>
-					</td>
-					<td class="col-sm-9">
-						<h4><s:property value="userZIP" escape="false"/></h4>
+						<div class="col-sm-3"><h4>City</h4></div>
+					<div class="col-sm-9">
+						<h4><s:property value="userCity" escape="false"/></h4></div>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<label class="col-sm-3"><h4>Country:</h4></label>
-					</td>
-					<td class="col-sm-9">
-						<h4><s:property value="userCountry" escape="false"/></h4>
+						<div class="col-sm-3"><h4>State</h4></div>
+					<div class="col-sm-9">
+						<h4><s:property value="userState" escape="false"/></h4></div>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<label class="col-sm-3"><h4>Phone&nbsp;Number:</h4></label>
+						<div class="col-sm-3"><h4>ZIP&nbsp;Code</h4></div>
+					<div class="col-sm-9">
+						<h4><s:property value="userZIP" escape="false"/></h4></div>
 					</td>
-					<td class="col-sm-9">
-						<h4><s:property value="userPhone" escape="false"/></h4>
+				</tr>
+				<tr>
+					<td>
+						<div class="col-sm-3"><h4>Country</h4></div>
+					<div class="col-sm-9">
+						<h4><s:property value="userCountry" escape="false"/></h4></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="col-sm-3"><h4>Phone&nbsp;Number</h4></div>
+					<div class="col-sm-9">
+						<h4><s:property value="userPhone" escape="false"/></h4></div>
 					</td>
 				</tr>
 

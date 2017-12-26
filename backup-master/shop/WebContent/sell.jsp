@@ -1,10 +1,38 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <jsp:include page="headerAdministratorsScreen.jsp"/>
+
 	<s:form class="text-right" action="BuyHistorySelectAction">
 	<div class="row">
-		<div class="col-xs-4 col-xs-offset-6">
+		<div class="col-xs-1">
+			<a class="btn-default btn"  onClick="Javascript:location.href = 'administratorsScreen.jsp'">back</a>
+		</div>
+		<div class="col-xs-4 col-xs-offset-5">
 			<input type="text" placeholder="User ID" class="form-control" name="targetId" style="width: 200px;">
+		</div>
+		<div class="col-xs-1">
+			<button class="btn-default btn" >Select</button>
+		</div>
+		<div class="col-xs-1">
+		</div>
+	</div>
+	</s:form>
+	<div style="line-height: 0.5;"><br></div>
+	<s:form class="text-right" action="BuyHistoryGoodsSelectAction">
+	<div class="row">
+		<div class="col-xs-4 col-xs-offset-6">
+			<select name="targetGoods" class=" form-control" style="width: 200px;">
+				<option value=1>Desktop PC</option>
+				<option value=2>Laptop</option>
+				<option value=3>Care</option>
+				<option value=4>T. 3/2 Adapter</option>
+				<option value=5>USB-C AV Adapter </option>
+				<option value=6>USB SuperDrive </option>
+				<option value=7>P.P. R4 12TB Storage</option>
+				<option value=8>AirPort</option>
+				<option value=9>Time Capsule</option>
+				<option value=10>Microsoft Office</option>
+			</select>
 		</div>
 		<div class="col-xs-1">
 			<button class="btn-default btn" >Select</button>
@@ -133,5 +161,7 @@
 		</s:iterator>
 
 	</table>
+
+	<a class="btn-default btn"  onClick="Javascript:location.href = 'administratorsScreen.jsp'">back</a>
 
 <jsp:include page="footerAdministrators.jsp"/>

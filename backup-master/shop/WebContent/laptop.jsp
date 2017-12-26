@@ -100,7 +100,7 @@
 		<br>
 		<br>
 
-		<div data-spy="affix" data-offset-top="-200"><div class="text-center" ><img src="laptop.jpg"  style="opacity: 0.7;"></div></div><!-- class="nav nav-pills nav-stocked" を消した -->
+		<div data-spy="affix" data-offset-top="220" id="left-image"><div class="text-center"  ><img src="laptop.jpg"  style="opacity: 0.7;" width="205" ></div></div>
 	</div>
 
 
@@ -113,7 +113,7 @@
 					<br>
 					<span id="memory">8GB 2133MHz DDR4</span><br>
 					<br>
-					<span id="storage">256GB SSD storage</span><br>
+					<span id="storage">128GB SSD storage</span><br>
 					<br>
 					Intel Iris Plus Graphics 640<br>
 					<br>
@@ -125,7 +125,7 @@
 					<br>
 					<p class="box"/>
 				</h5>
-				<div class="col-xs-offset-2 col-xs-10"">
+				<div class="col-xs-offset-2 col-xs-10">
 					<script type="text/javascript">
 						$(function(){
 							$(".overlay-btn").click(function(){
@@ -138,6 +138,178 @@
 							});
 						});
 					</script>
+					<div class="panel panel-default">
+						<div class="panel-footer">
+						<h5>☆&nbsp;Faster delivery available for popular configurations.</h5>
+						<button id="standard" class="btn-default btn-lg btn-block text-left" onClick="Standard()"><br><div class="inliner">Standard Configuration</div><div class="inliner-right"></div><br>&nbsp;</button>
+						<button id="custom2" class="btn-default btn-lg btn-block text-left" onClick="Custom2()"><br><div class="inliner">16GB memory, 256GB storage</div><div class="inliner-right"></div><br>&nbsp;</button>
+						<button id="custom3" class="btn-default btn-lg btn-block text-left" onClick="Custom3()"><br><div class="inliner">512GB Storage</div><div class="inliner-right"></div><br>&nbsp;</button>
+						<button id="custom3" class="btn-default btn-lg btn-block text-left" onClick="Custom4()"><br><div class="inliner">16GB memory, 512GB storage</div><div class="inliner-right"></div><br>&nbsp;</button>
+						</div>
+					</div>
+					<script type="text/javascript">
+							function Standard(){
+								var newValue = "8GB 2133MHz DDR4";
+								var new8GB="<br><div class='inliner'>8GB 2133MHz DDR4</div><div class='inliner-right'></div><br>&nbsp;"
+								var new16GB ="<br><div class='inliner'>16GB 2133MHz DDR4</div><div class='inliner-right' style='color: gray;''>+ $200.00</div>&nbsp;";
+								document.getElementById('memory').innerHTML = newValue;
+								document.getElementById('8GB').innerHTML = new8GB;
+								document.getElementById('16GB').innerHTML = new16GB;
+								document.getElementById('memoryForm').value=0;
+								memoryPrice = 0;
+								var newValue = "128GB SSD storage";
+								var new128GBSSD ="<br><div class='inliner'>128GB SSD storage</div><div class='inliner-right' style='color: gray;'></div><br>&nbsp;";
+								var new256GBSSD ="<br><div class='inliner'>256GB SSD storage</div><div class='inliner-right' style='color: gray;'>+ $200.00</div>&nbsp;";
+								var new512GBSSD ="<br><div class='inliner'>512GB SSD storage</div><div class='inliner-right' style='color: gray;'>+ $400.00</div>&nbsp;";
+								var new1TBSSD = "<br><div class='inliner'>1TB SSD storage</div><div class='inliner-right' style='color: gray;'>+ $800.00</div>&nbsp;";
+								document.getElementById('storage').innerHTML = newValue;
+								document.getElementById('128GBSSD').innerHTML = new128GBSSD;
+								document.getElementById('256GBSSD').innerHTML = new256GBSSD;
+								document.getElementById('512GBSSD').innerHTML = new512GBSSD;
+								document.getElementById('1TBSSD').innerHTML = new1TBSSD;
+								document.getElementById('storageForm').value=1;
+								storagePrice = 0;
+								var newValue = "";
+								var newNoneFruit="<br>none<br>&nbsp;"
+								var newOnFruit ="<div style='line-height: 0.8;'><br></div>Fruits Cut Pro X<div style='color: gray;'>+ $299.99</div><div style='line-height: 0.3;'><br>&nbsp;</div>"
+								document.getElementById('fruit').innerHTML = newValue;
+								document.getElementById('NoneFruit').innerHTML = newNoneFruit;
+								document.getElementById('OnFruit').innerHTML = newOnFruit;
+								document.getElementById('fruitForm').value=0;
+								fruitPrice = 0;
+								var newValue = "";
+								var newNoneFlower="<br>none<br>&nbsp;";
+								var newOnFlower ="<div style='line-height: 0.8;'><br></div>Flower Petal X<div style='color: gray;'>+ $199.99</div><div style='line-height: 0.3;'><br>&nbsp;</div>";
+								document.getElementById('flower').innerHTML = newValue;
+								document.getElementById('NoneFlower').innerHTML = newNoneFlower;
+								document.getElementById('OnFlower').innerHTML = newOnFlower;
+								document.getElementById('flowerForm').value=0;
+								flowerPrice = 0;
+								var i= price + memoryPrice + storagePrice + mousePrice  + fruitPrice  + flowerPrice;
+								document.getElementById('priceTelling').innerHTML = i.toFixed(2);
+							}
+							function Custom2(){
+								var newValue = "<strong>16GB 2133MHz DDR4</strong>";
+								var new8GB ="<br><div class='inliner'>8GB 2133MHz DDR4</div><div class='inliner-right' style='color: gray;''>- $200.00</div>&nbsp;";
+								var new16GB ="<br><div class='inliner'>16GB 2133MHz DDR4</div><div class='inliner-right' style='color: gray;''></div><br>&nbsp;";
+								document.getElementById('memory').innerHTML = newValue;
+								document.getElementById('8GB').innerHTML = new8GB;
+								document.getElementById('16GB').innerHTML = new16GB;
+								document.getElementById('memoryForm').value=1;
+								memoryPrice = 200;
+								var newValue = "<strong>256GB SSD storage</strong>";
+								var new128GBSSD ="<br><div class='inliner'>128GB SSD storage</div><div class='inliner-right' style='color: gray;'>- $200.00</div>&nbsp;";
+								var new256GBSSD ="<br><div class='inliner'>256GB SSD storage</div><div class='inliner-right' style='color: gray;'></div><br>&nbsp;";
+								var new512GBSSD ="<br><div class='inliner'>512GB SSD storage</div><div class='inliner-right' style='color: gray;'>+ $200.00</div>&nbsp;";
+								var new1TBSSD = "<br><div class='inliner'>1TB SSD storage</div><div class='inliner-right' style='color: gray;'>+ $600.00</div>&nbsp;";
+								document.getElementById('storage').innerHTML = newValue;
+								document.getElementById('128GBSSD').innerHTML = new128GBSSD;
+								document.getElementById('256GBSSD').innerHTML = new256GBSSD;
+								document.getElementById('512GBSSD').innerHTML = new512GBSSD;
+								document.getElementById('1TBSSD').innerHTML = new1TBSSD;
+								document.getElementById('storageForm').value=2;
+								storagePrice = 200;
+								var newValue = "";
+								var newNoneFruit="<br>none<br>&nbsp;"
+								var newOnFruit ="<div style='line-height: 0.8;'><br></div>Fruits Cut Pro X<div style='color: gray;'>+ $299.99</div><div style='line-height: 0.3;'><br>&nbsp;</div>"
+								document.getElementById('fruit').innerHTML = newValue;
+								document.getElementById('NoneFruit').innerHTML = newNoneFruit;
+								document.getElementById('OnFruit').innerHTML = newOnFruit;
+								document.getElementById('fruitForm').value=0;
+								fruitPrice = 0;
+								var newValue = "";
+								var newNoneFlower="<br>none<br>&nbsp;";
+								var newOnFlower ="<div style='line-height: 0.8;'><br></div>Flower Petal X<div style='color: gray;'>+ $199.99</div><div style='line-height: 0.3;'><br>&nbsp;</div>";
+								document.getElementById('flower').innerHTML = newValue;
+								document.getElementById('NoneFlower').innerHTML = newNoneFlower;
+								document.getElementById('OnFlower').innerHTML = newOnFlower;
+								document.getElementById('flowerForm').value=0;
+								flowerPrice = 0;
+								var i= price + memoryPrice + storagePrice + mousePrice  + fruitPrice  + flowerPrice;
+								document.getElementById('priceTelling').innerHTML = i.toFixed(2);
+							}
+							function Custom3(){
+								var newValue = "8GB 2133MHz DDR4";
+								var new8GB="<br><div class='inliner'>8GB 2133MHz DDR4</div><div class='inliner-right'></div><br>&nbsp;"
+								var new16GB ="<br><div class='inliner'>16GB 2133MHz DDR4</div><div class='inliner-right' style='color: gray;''>+ $200.00</div>&nbsp;";
+								document.getElementById('memory').innerHTML = newValue;
+								document.getElementById('8GB').innerHTML = new8GB;
+								document.getElementById('16GB').innerHTML = new16GB;
+								document.getElementById('memoryForm').value=0;
+								memoryPrice = 0;
+								var newValue = "<strong>512GB SSD storage</strong>";
+								var new128GBSSD ="<br><div class='inliner'>128GB SSD storage</div><div class='inliner-right' style='color: gray;'>- $400.00</div>&nbsp;";
+								var new256GBSSD ="<br><div class='inliner'>256GB SSD storage</div><div class='inliner-right' style='color: gray;'>- $200.00</div>&nbsp;";
+								var new512GBSSD ="<br><div class='inliner'>512GB SSD storage</div><div class='inliner-right' style='color: gray;'></div><br>&nbsp;";
+								var new1TBSSD = "<br><div class='inliner'>1TB SSD storage</div><div class='inliner-right' style='color: gray;'>+ $400.00</div>&nbsp;";
+								document.getElementById('storage').innerHTML = newValue;
+								document.getElementById('128GBSSD').innerHTML = new128GBSSD;
+								document.getElementById('256GBSSD').innerHTML = new256GBSSD;
+								document.getElementById('512GBSSD').innerHTML = new512GBSSD;
+								document.getElementById('1TBSSD').innerHTML = new1TBSSD;
+								document.getElementById('storageForm').value=3;
+								storagePrice = 400;
+								var newValue = "";
+								var newNoneFruit="<br>none<br>&nbsp;"
+								var newOnFruit ="<div style='line-height: 0.8;'><br></div>Fruits Cut Pro X<div style='color: gray;'>+ $299.99</div><div style='line-height: 0.3;'><br>&nbsp;</div>"
+								document.getElementById('fruit').innerHTML = newValue;
+								document.getElementById('NoneFruit').innerHTML = newNoneFruit;
+								document.getElementById('OnFruit').innerHTML = newOnFruit;
+								document.getElementById('fruitForm').value=0;
+								fruitPrice = 0;
+								var newValue = "";
+								var newNoneFlower="<br>none<br>&nbsp;";
+								var newOnFlower ="<div style='line-height: 0.8;'><br></div>Flower Petal X<div style='color: gray;'>+ $199.99</div><div style='line-height: 0.3;'><br>&nbsp;</div>";
+								document.getElementById('flower').innerHTML = newValue;
+								document.getElementById('NoneFlower').innerHTML = newNoneFlower;
+								document.getElementById('OnFlower').innerHTML = newOnFlower;
+								document.getElementById('flowerForm').value=0;
+								flowerPrice = 0;
+								var i= price + memoryPrice + storagePrice + mousePrice  + fruitPrice  + flowerPrice;
+								document.getElementById('priceTelling').innerHTML = i.toFixed(2);
+							}
+							function Custom4(){
+								var newValue = "<strong>16GB 2133MHz DDR4</strong>";
+								var new8GB ="<br><div class='inliner'>8GB 2133MHz DDR4</div><div class='inliner-right' style='color: gray;''>- $200.00</div>&nbsp;";
+								var new16GB ="<br><div class='inliner'>16GB 2133MHz DDR4</div><div class='inliner-right' style='color: gray;''></div><br>&nbsp;";
+								document.getElementById('memory').innerHTML = newValue;
+								document.getElementById('8GB').innerHTML = new8GB;
+								document.getElementById('16GB').innerHTML = new16GB;
+								document.getElementById('memoryForm').value=1;
+								memoryPrice = 200;
+								var newValue = "<strong>512GB SSD storage</strong>";
+								var new128GBSSD ="<br><div class='inliner'>128GB SSD storage</div><div class='inliner-right' style='color: gray;'>- $400.00</div>&nbsp;";
+								var new256GBSSD ="<br><div class='inliner'>256GB SSD storage</div><div class='inliner-right' style='color: gray;'>- $200.00</div>&nbsp;";
+								var new512GBSSD ="<br><div class='inliner'>512GB SSD storage</div><div class='inliner-right' style='color: gray;'></div><br>&nbsp;";
+								var new1TBSSD = "<br><div class='inliner'>1TB SSD storage</div><div class='inliner-right' style='color: gray;'>+ $400.00</div>&nbsp;";
+								document.getElementById('storage').innerHTML = newValue;
+								document.getElementById('128GBSSD').innerHTML = new128GBSSD;
+								document.getElementById('256GBSSD').innerHTML = new256GBSSD;
+								document.getElementById('512GBSSD').innerHTML = new512GBSSD;
+								document.getElementById('1TBSSD').innerHTML = new1TBSSD;
+								document.getElementById('storageForm').value=3;
+								storagePrice = 400;
+								var newValue = "";
+								var newNoneFruit="<br>none<br>&nbsp;"
+								var newOnFruit ="<div style='line-height: 0.8;'><br></div>Fruits Cut Pro X<div style='color: gray;'>+ $299.99</div><div style='line-height: 0.3;'><br>&nbsp;</div>"
+								document.getElementById('fruit').innerHTML = newValue;
+								document.getElementById('NoneFruit').innerHTML = newNoneFruit;
+								document.getElementById('OnFruit').innerHTML = newOnFruit;
+								document.getElementById('fruitForm').value=0;
+								fruitPrice = 0;
+								var newValue = "";
+								var newNoneFlower="<br>none<br>&nbsp;";
+								var newOnFlower ="<div style='line-height: 0.8;'><br></div>Flower Petal X<div style='color: gray;'>+ $199.99</div><div style='line-height: 0.3;'><br>&nbsp;</div>";
+								document.getElementById('flower').innerHTML = newValue;
+								document.getElementById('NoneFlower').innerHTML = newNoneFlower;
+								document.getElementById('OnFlower').innerHTML = newOnFlower;
+								document.getElementById('flowerForm').value=0;
+								flowerPrice = 0;
+								var i= price + memoryPrice + storagePrice + mousePrice  + fruitPrice  + flowerPrice;
+								document.getElementById('priceTelling').innerHTML = i.toFixed(2);
+							}
+						</script>
+						<div style="line-height: 0.5;"><br></div>
 					<h4><strong>Memory</strong></h4>
 					<div class="overlay-btn">How much memory is right for you?</div>
 					<br>
@@ -169,8 +341,6 @@
 							}
 						</script>
 						<script type="text/javascript">
-
-
 						</script>
 					<button id="8GB" class="btn-default btn-lg btn-block text-left" onClick="EightGB()"><br><div class="inliner">8GB 2133MHz DDR4</div><div class="inliner-right"></div><br>&nbsp;</button>
 					<br style="line-height: 0.5;">

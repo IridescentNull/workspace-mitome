@@ -4,10 +4,10 @@
 
 		<h2 class="text-center">Account Creation Form</h2>
 	<s:form cssClass="form-horizontal" action="UserCreateConfirmAction">
-			<table class="table table-striped">
+			<table class="table table-striped text-center">
 				<tr>
-					<td>
-						<label class="col-sm-3"><h4>Login Id:</h4></label>
+					<td class="td_vertical_align_middle">
+						<label class="col-sm-3"><h4>Login Id</h4></label>
 						<div class="col-sm-9">
 							<input id="idCheck" name="loginUserId" placeholder="Orange_Farmer007" class="form-control">
 						<%@page import="java.util.List" %>
@@ -51,80 +51,80 @@
 					</td>
 				</tr>
 				<tr>
-					<td>
-						<label class="col-sm-3"><h4>Password:</h4></label>
+					<td class="td_vertical_align_middle">
+						<label class="col-sm-3"><h4>Password</h4></label>
 						<div class="col-sm-9">
 							<input name="loginPassword" type="password" placeholder="*Chinotto147" class="form-control">
 						</div>
 					</td>
 				</tr>
 				<tr>
-					<td>
-						<label class="col-sm-3"><h4>Password<small>(reconfirm)</small>:</h4></label>
+					<td class="td_vertical_align_middle">
+						<label class="col-sm-3"><h4>Password<small>(reconfirm)</small></h4></label>
 						<div class="col-sm-9">
 							<input name="loginPasswordShadow" type="password" placeholder="please input same password ; )" class="form-control">
 						</div>
 					</td>
 				</tr>
 				<tr>
-					<td>
-						<label class="col-sm-3"><h4>Full Name:</h4></label>
+					<td class="td_vertical_align_middle">
+						<label class="col-sm-3"><h4>Full Name</h4></label>
 						<div class="col-sm-9">
 							<input name="userName" placeholder="Pehr Osbeck" class="form-control">
 						</div>
 					</td>
 				</tr>
 				<tr>
-					<td>
-						<label class="col-sm-3"><h4>Address (Line1):</h4></label>
+					<td class="td_vertical_align_middle">
+						<label class="col-sm-3"><h4>Address (Line1)</h4></label>
 						<div class="col-sm-9">
 							<input name="userAddress1" placeholder="1 eternal Loop" class="form-control">
 						</div>
 					</td>
 				</tr>
 				<tr>
-					<td>
-						<label class="col-sm-3"><h4>Address (Line2):</h4></label>
+					<td class="td_vertical_align_middle">
+						<label class="col-sm-3"><h4>Address (Line2)</h4></label>
 						<div class="col-sm-9">
 							<input name="userAddress2" placeholder="If you need.(e.g. Apartment,Suite,Unit,Building,Floor,etc )" class="form-control">
 						</div>
 					</td>
 				</tr>
 				<tr>
-					<td>
-						<label class="col-sm-3"><h4>City:</h4></label>
+					<td class="td_vertical_align_middle">
+						<label class="col-sm-3"><h4>City</h4></label>
 						<div class="col-sm-9">
 							<input name="userCity" placeholder="Navel" class="form-control">
 						</div>
 					</td>
 				</tr>
 					<tr>
-					<td>
-						<label class="col-sm-3"><h4>State:</h4></label>
+					<td class="td_vertical_align_middle">
+						<label class="col-sm-3"><h4>State</h4></label>
 						<div class="col-sm-9">
 							<input name="userState" placeholder="WA" class="form-control">
 						</div>
 					</td>
 				</tr>
 				<tr>
-					<td>
-						<label class="col-sm-3"><h4>ZIP Code:</h4></label>
+					<td class="td_vertical_align_middle">
+						<label class="col-sm-3"><h4>ZIP Code</h4></label>
 						<div class="col-sm-9">
 							<input name="userZIP" placeholder="41059" class="form-control">
 						</div>
 					</td>
 				</tr>
 				<tr>
-					<td>
-						<label class="col-sm-3"><h4>Country:</h4></label>
+					<td class="td_vertical_align_middle">
+						<label class="col-sm-3"><h4>Country</h4></label>
 						<div class="col-sm-9">
 							<input name="userCountry" placeholder="USA" class="form-control">
 						</div>
 					</td>
 				</tr>
 				<tr>
-					<td>
-						<label class="col-sm-3"><h4>Phone Number:</h4></label>
+					<td class="td_vertical_align_middle">
+						<label class="col-sm-3"><h4>Phone Number</h4></label>
 						<div class="col-sm-9">
 							<input name="userPhone" placeholder="123-456-789" class="form-control">
 						</div>

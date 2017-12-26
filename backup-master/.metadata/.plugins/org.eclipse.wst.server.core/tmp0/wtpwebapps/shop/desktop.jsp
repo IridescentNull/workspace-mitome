@@ -100,7 +100,7 @@
 		<br>
 		<br>
 
-		<div data-spy="affix" data-offset-top="-200"><div class="text-center" ><img src="desktop.gif"  style="opacity: 0.7;"></div></div><!-- class="nav nav-pills nav-stocked" を消した -->
+		<div data-spy="affix" data-offset-top="220" id="left-image"><div class="text-center" ><img src="desktop.gif"  style="opacity: 0.7;"></div></div>
 	</div>
 
 

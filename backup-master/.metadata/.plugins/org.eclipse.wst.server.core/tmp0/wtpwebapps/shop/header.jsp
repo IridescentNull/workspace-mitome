@@ -44,7 +44,7 @@
 	}
 	footer{
 		height: 60px;
-		}
+	}
 	footer.perchase{
 		height: 120px;
 		background-color: #f5f5f5;
@@ -52,7 +52,13 @@
 		bottom: 0;
 		width: 100%;
 		border-top:1px solid #cccccc;
-		}
+	}
+
+	#left-image.affix{
+		top:0px;
+		position: fixed;
+		margin-left: 15px;
+	}
 	#wrap{
 		mini-height:100%;
 		height: auto;
@@ -297,6 +303,11 @@
 
 	ul.perchase-bottom.perchase-bottom.perchase-bottom > li{
 		text-align: left;
+	}
+
+	ul.perchase-bottom{
+		width: 100%;
+		display: table;
 	}
 
 	#taxQuestion:hover >.mini-overlay{
